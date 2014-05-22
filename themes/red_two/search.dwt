@@ -256,7 +256,7 @@ function tab(id)
 							</b></span>
 							<span class="gl-p-r"><del>{$goods.market_price}</del></span>
                             {insert_scripts files='lefttime.js'}
-                            <br/>{$lang.residual_time}<span class="rs_jq_timer">{$lang.please_waiting}</span>
+                            <font class="f4" id="leftTime">{$lang.please_waiting}</font><br />
 						</div>
 					</div>
 				</li>

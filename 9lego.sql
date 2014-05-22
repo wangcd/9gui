@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-05-20 17:43:58
+Date: 2014-05-22 14:00:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,12 +30,15 @@ CREATE TABLE `lego_account_log` (
   `change_type` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY (`log_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_account_log
 -- ----------------------------
 INSERT INTO `lego_account_log` VALUES ('1', '1', '0.00', '0.00', '187', '187', '1400396275', '订单 2014051814199 赠送的积分', '99');
+INSERT INTO `lego_account_log` VALUES ('2', '2', '0.00', '0.00', '315', '315', '1400654841', '订单 2014052154400 赠送的积分', '99');
+INSERT INTO `lego_account_log` VALUES ('3', '2', '0.00', '0.00', '69', '69', '1400656686', '订单 2014052150829 赠送的积分', '99');
+INSERT INTO `lego_account_log` VALUES ('4', '2', '0.00', '0.00', '560', '560', '1400656782', '订单 2014052121478 赠送的积分', '99');
 
 -- ----------------------------
 -- Table structure for `lego_ad`
@@ -58,21 +61,22 @@ CREATE TABLE `lego_ad` (
   PRIMARY KEY (`ad_id`),
   KEY `position_id` (`position_id`),
   KEY `enabled` (`enabled`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_ad
 -- ----------------------------
 INSERT INTO `lego_ad` VALUES ('1', '1', '0', '首页左侧公告下方', '', '1395083419883245097.jpg', '1395043200', '1817971200', '', '', '', '0', '1');
 INSERT INTO `lego_ad` VALUES ('2', '2', '0', '首页品牌馆广告1', '', '1395102492548019604.jpg', '1395043200', '1650096000', '', '', '', '0', '1');
-INSERT INTO `lego_ad` VALUES ('3', '2', '0', '首页品牌馆广告2', '', '1395102563563259104.jpg', '1395043200', '1650096000', '', '', '', '1', '1');
+INSERT INTO `lego_ad` VALUES ('3', '2', '0', '首页品牌馆广告2', '', '1395102563563259104.jpg', '1395043200', '1650096000', '', '', '', '2', '1');
 INSERT INTO `lego_ad` VALUES ('4', '2', '0', '首页品牌馆广告3', '', '1395102587645982936.jpg', '1395043200', '1650096000', '', '', '', '1', '1');
 INSERT INTO `lego_ad` VALUES ('5', '2', '0', '首页品牌馆广告4', '', '1395102627171935319.jpg', '1395043200', '1650096000', '', '', '', '1', '1');
 INSERT INTO `lego_ad` VALUES ('6', '2', '0', '首页品牌馆广告5', '', '1395102643056246082.jpg', '1395043200', '1650096000', '', '', '', '0', '1');
-INSERT INTO `lego_ad` VALUES ('7', '3', '0', '首页全宽行广告', '', '1395103879947831038.jpg', '1395043200', '1650096000', '', '', '', '0', '1');
+INSERT INTO `lego_ad` VALUES ('7', '3', '0', '首页全宽行广告', '', '1400570194464651358.jpg', '1395043200', '1650096000', '', '', '', '0', '1');
 INSERT INTO `lego_ad` VALUES ('8', '4', '0', '首页商品分类内广告1', '', '1395165263409182523.jpg', '1395129600', '1650182400', '', '', '', '0', '1');
 INSERT INTO `lego_ad` VALUES ('9', '4', '0', '首页商品分类内广告2', '', '1395165318462292254.jpg', '1395129600', '1650182400', '', '', '', '1', '1');
 INSERT INTO `lego_ad` VALUES ('10', '4', '0', '首页商品分类内广告3', '', '1395621905213961042.jpg', '1395561600', '1650614400', '', '', '', '3', '1');
+INSERT INTO `lego_ad` VALUES ('11', '6', '0', '首页商品分类列表左侧', '', '1400657319062474672.jpg', '1400572800', '1403164800', '', '', '', '0', '1');
 
 -- ----------------------------
 -- Table structure for `lego_ad_custom`
@@ -105,7 +109,7 @@ CREATE TABLE `lego_ad_position` (
   `position_desc` varchar(255) NOT NULL DEFAULT '',
   `position_style` text NOT NULL,
   PRIMARY KEY (`position_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_ad_position
@@ -115,6 +119,7 @@ INSERT INTO `lego_ad_position` VALUES ('2', '首页品牌馆广告位', '220', '
 INSERT INTO `lego_ad_position` VALUES ('3', '首页全宽行广告位', '1200', '100', '', '{foreach from=$ads item=ad}\r\n<div class=\"wrap cl\">\r\n	<div class=\"sitewith\">\r\n		{$ad}\r\n	</div>\r\n</div>\r\n{/foreach}');
 INSERT INTO `lego_ad_position` VALUES ('4', '首页商品分类内广告位', '220', '287', '', '{foreach from=$ads item=ad}\r\n<div class=\"JQ_cat_ad_data\">{$ad}</div>\r\n{/foreach}');
 INSERT INTO `lego_ad_position` VALUES ('5', '文章列表上', '1200', '100', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `lego_ad_position` VALUES ('6', '首页商品分类列表左侧', '208', '300', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
 
 -- ----------------------------
 -- Table structure for `lego_admin_action`
@@ -255,7 +260,7 @@ CREATE TABLE `lego_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `log_time` (`log_time`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=229 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=252 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_admin_log
@@ -488,6 +493,29 @@ INSERT INTO `lego_admin_log` VALUES ('225', '1400538882', '1', '删除文章: �
 INSERT INTO `lego_admin_log` VALUES ('226', '1400538983', '1', '添加文章: 品尚动态12', '127.0.0.1');
 INSERT INTO `lego_admin_log` VALUES ('227', '1400538992', '1', '添加文章: 品尚动态34', '127.0.0.1');
 INSERT INTO `lego_admin_log` VALUES ('228', '1400539005', '1', '添加文章: 品尚动态呃呃呃', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('229', '1400570194', '1', '编辑广告: 首页全宽行广告', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('230', '1400654751', '1', '添加会员账号: wcd', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('231', '1400657254', '1', '添加广告位置: 首页商品分类列表左侧', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('232', '1400657269', '1', '编辑广告位置: 208', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('233', '1400657279', '1', '编辑广告位置: 首页商品分类列表左侧', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('234', '1400657319', '1', '添加广告: 首页商品分类列表左侧', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('235', '1400657417', '1', '编辑广告位置: 首页商品分类列表左侧', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('236', '1400657433', '1', '编辑广告: 首页商品分类列表左侧', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('237', '1400657463', '1', '编辑广告位置: 300', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('238', '1400691180', '1', '添加商品: 精品酒刀海马酒刀红酒开瓶器', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('239', '1400691225', '1', '编辑商品: 精品酒刀海马酒刀红酒开瓶器', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('240', '1400691372', '1', '添加商品: 黑色按压式真空塞', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('241', '1400691436', '1', '编辑商品: 精品酒刀海马酒刀红酒开瓶器', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('242', '1400691461', '1', '编辑商品: 黑色按压式真空塞', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('243', '1400691929', '1', '编辑商品: 精品酒刀海马酒刀红酒开瓶器', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('244', '1400691940', '1', '编辑商品: 黑色按压式真空塞', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('245', '1400695404', '1', '添加友情链接: 百度', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('246', '1400695659', '1', '添加友情链接: 搜狐', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('247', '1400695680', '1', '添加友情链接: 谷歌', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('248', '1400695706', '1', '添加友情链接: 360知道', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('249', '1400697079', '1', '添加商品分类: 其他', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('250', '1400697095', '1', '添加商品分类: 酒类杂志', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('251', '1400697113', '1', '添加商品分类: 酒类书籍', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for `lego_admin_message`
@@ -540,7 +568,7 @@ CREATE TABLE `lego_admin_user` (
 -- ----------------------------
 -- Records of lego_admin_user
 -- ----------------------------
-INSERT INTO `lego_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1400547000', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
+INSERT INTO `lego_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1400702055', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
 
 -- ----------------------------
 -- Table structure for `lego_adsense`
@@ -557,7 +585,7 @@ CREATE TABLE `lego_adsense` (
 -- Records of lego_adsense
 -- ----------------------------
 INSERT INTO `lego_adsense` VALUES ('5', '本站', '1');
-INSERT INTO `lego_adsense` VALUES ('3', '本站', '1');
+INSERT INTO `lego_adsense` VALUES ('3', '本站', '2');
 INSERT INTO `lego_adsense` VALUES ('9', '本站', '1');
 INSERT INTO `lego_adsense` VALUES ('10', '本站', '3');
 INSERT INTO `lego_adsense` VALUES ('4', '本站', '1');
@@ -988,7 +1016,7 @@ CREATE TABLE `lego_cart` (
   `goods_attr_id` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`rec_id`),
   KEY `session_id` (`session_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_cart
@@ -1028,7 +1056,7 @@ CREATE TABLE `lego_category` (
   `filter_attr` varchar(255) NOT NULL DEFAULT '0',
   PRIMARY KEY (`cat_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_category
@@ -1064,6 +1092,9 @@ INSERT INTO `lego_category` VALUES ('29', '红酒杯', '', '', '5', '50', '', ''
 INSERT INTO `lego_category` VALUES ('30', '香槟杯', '', '', '5', '50', '', '', '0', '', '1', '0', '');
 INSERT INTO `lego_category` VALUES ('31', '烈酒杯', '', '', '5', '50', '', '', '0', '', '1', '0', '');
 INSERT INTO `lego_category` VALUES ('32', '醒酒器', '', '', '5', '50', '', '', '0', '', '1', '0', '');
+INSERT INTO `lego_category` VALUES ('33', '其他', '', '', '0', '50', '', '', '0', '', '1', '0', '');
+INSERT INTO `lego_category` VALUES ('34', '酒类杂志', '', '', '33', '50', '', '', '0', '', '1', '0', '');
+INSERT INTO `lego_category` VALUES ('35', '酒类书籍', '', '', '33', '50', '', '', '0', '', '1', '0', '');
 
 -- ----------------------------
 -- Table structure for `lego_collect_goods`
@@ -1163,13 +1194,16 @@ CREATE TABLE `lego_delivery_goods` (
   PRIMARY KEY (`rec_id`),
   KEY `delivery_id` (`delivery_id`,`goods_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_delivery_goods
 -- ----------------------------
 INSERT INTO `lego_delivery_goods` VALUES ('1', '1', '1', '0', '', '法国马蒂隆1907干红葡萄酒 750ml', '马蒂隆', 'ble000000', '1', null, '0', '1', '');
 INSERT INTO `lego_delivery_goods` VALUES ('2', '1', '2', '0', '', '法国拉菲庄园法莱利经典干红葡萄酒 750ml', '拉菲庄园', 'ble000002', '1', null, '0', '1', '');
+INSERT INTO `lego_delivery_goods` VALUES ('3', '2', '16', '0', '', '40°轩尼诗VSOP干邑白兰地 700ml', '', 'ble000016', '1', null, '0', '1', '');
+INSERT INTO `lego_delivery_goods` VALUES ('4', '3', '12', '0', '', '40°百加得超级朗姆酒 750ml', '', 'ble000012', '1', null, '0', '1', '');
+INSERT INTO `lego_delivery_goods` VALUES ('5', '4', '13', '0', '', '40°美国深蓝伏特加 750ml', '', 'ble000013', '1', null, '0', '10', '');
 
 -- ----------------------------
 -- Table structure for `lego_delivery_order`
@@ -1209,12 +1243,15 @@ CREATE TABLE `lego_delivery_order` (
   PRIMARY KEY (`delivery_id`),
   KEY `user_id` (`user_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_delivery_order
 -- ----------------------------
 INSERT INTO `lego_delivery_order` VALUES ('1', '20140518225774099', '2014051814199', '1', '', '1400396252', '1', '市内快递', '1', 'admin', '啊啊', '啊啊啊啊啊啊', '1', '2', '52', '502', '', '', '', '11111111111', '', '', '', '等待所有商品备齐后再发', '0.00', '0.00', '1400396267', '0', '0', '0');
+INSERT INTO `lego_delivery_order` VALUES ('2', '20140521224762628', '2014052154400', '2', '', '1400654819', '1', '市内快递', '2', 'admin', 'wcd', 'wcd', '1', '11', '150', '1271', 'dd', '774241885@qq.com', '342', '2141', '23423', 'wcd', '', '等待所有商品备齐后再发', '0.00', '0.00', '1400654832', '0', '0', '0');
+INSERT INTO `lego_delivery_order` VALUES ('3', '20140521231717031', '2014052150829', '3', '', '1400656670', '1', '市内快递', '2', 'admin', 'wcd', 'wcd', '1', '11', '150', '1271', 'dd', '774241885@qq.com', '342', '2141', '23423', 'wcd', '', '等待所有商品备齐后再发', '0.00', '0.00', '1400656679', '0', '0', '0');
+INSERT INTO `lego_delivery_order` VALUES ('4', '20140521231997537', '2014052121478', '4', '', '1400656766', '1', '市内快递', '2', 'admin', 'wcd', 'wcd', '1', '11', '150', '1271', 'dd', '774241885@qq.com', '342', '2141', '23423', 'wcd', '', '等待所有商品备齐后再发', '0.00', '0.00', '1400656774', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `lego_email_list`
@@ -1349,12 +1386,16 @@ CREATE TABLE `lego_friend_link` (
   `show_order` tinyint(3) unsigned NOT NULL DEFAULT '50',
   PRIMARY KEY (`link_id`),
   KEY `show_order` (`show_order`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_friend_link
 -- ----------------------------
 INSERT INTO `lego_friend_link` VALUES ('1', '101便利', 'http://www.101bianli.com', '', '50');
+INSERT INTO `lego_friend_link` VALUES ('2', '百度', 'http://www.baidu.com', '', '50');
+INSERT INTO `lego_friend_link` VALUES ('3', '搜狐', 'http://www.souhu.con', '', '50');
+INSERT INTO `lego_friend_link` VALUES ('4', '谷歌', 'http://www.goole.com', '', '50');
+INSERT INTO `lego_friend_link` VALUES ('5', '360知道', 'http://www.360.com', '', '50');
 
 -- ----------------------------
 -- Table structure for `lego_goods`
@@ -1414,14 +1455,14 @@ CREATE TABLE `lego_goods` (
   KEY `promote_start_date` (`promote_start_date`),
   KEY `goods_number` (`goods_number`),
   KEY `sort_order` (`sort_order`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_goods
 -- ----------------------------
 INSERT INTO `lego_goods` VALUES ('1', '2', 'ble000000', '法国马蒂隆1907干红葡萄酒 750ml', '+', '33', '0', '', '0', '0.000', '320.00', '88.00', '0.00', '0', '0', '0', '法国 红色 干红', '', '', 'images/201403/thumb_img/1_thumb_G_1395430740653.jpg', 'images/201403/goods_img/1_G_1395430740995.jpg', 'images/201403/source_img/1_G_1395430740040.jpg', '1', '', '1', '1', '0', '0', '1395096741', '100', '0', '1', '1', '1', '0', '0', '1400218103', '2', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('2', '2', 'ble000002', '法国拉菲庄园法莱利经典干红葡萄酒 750ml', '+', '18', '0', '', '0', '0.000', '538.00', '99.00', '0.00', '0', '0', '0', '法国 红色 干红', '法国拉菲庄园法莱利经典干红葡萄酒，散发着黑莓的紫色和微微的胡椒香，酒体适中，入口有浓郁的果香夹带着优雅的丹宁。与各种卤汁料理，野味和辣菜、酱鸭、鹅肝、红烧肉搭配最佳。', '', 'images/201403/thumb_img/2_thumb_G_1395438523627.jpg', 'images/201403/goods_img/2_G_1395438523569.jpg', 'images/201403/source_img/2_G_1395438523115.jpg', '1', '', '1', '1', '0', '0', '1395438523', '100', '0', '1', '0', '0', '0', '0', '1400218102', '2', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('3', '2', 'ble000003', '法国拉菲庄园法莱利干红葡萄酒 750ml', '+', '2', '0', '', '0', '0.000', '480.00', '168.00', '0.00', '0', '0', '0', '法国 红色 干红', '', '', 'images/201403/thumb_img/3_thumb_G_1395440181586.jpg', 'images/201403/goods_img/3_G_1395440181438.jpg', 'images/201403/source_img/3_G_1395440181681.jpg', '1', '', '1', '1', '0', '0', '1395440181', '100', '0', '0', '1', '0', '0', '0', '1400218089', '2', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('2', '2', 'ble000002', '法国拉菲庄园法莱利经典干红葡萄酒 750ml', '+', '19', '0', '', '0', '0.000', '538.00', '99.00', '0.00', '0', '0', '0', '法国 红色 干红', '法国拉菲庄园法莱利经典干红葡萄酒，散发着黑莓的紫色和微微的胡椒香，酒体适中，入口有浓郁的果香夹带着优雅的丹宁。与各种卤汁料理，野味和辣菜、酱鸭、鹅肝、红烧肉搭配最佳。', '', 'images/201403/thumb_img/2_thumb_G_1395438523627.jpg', 'images/201403/goods_img/2_G_1395438523569.jpg', 'images/201403/source_img/2_G_1395438523115.jpg', '1', '', '1', '1', '0', '0', '1395438523', '100', '0', '1', '0', '0', '0', '0', '1400218102', '2', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('3', '2', 'ble000003', '法国拉菲庄园法莱利干红葡萄酒 750ml', '+', '3', '0', '', '0', '0.000', '480.00', '168.00', '0.00', '0', '0', '0', '法国 红色 干红', '', '', 'images/201403/thumb_img/3_thumb_G_1395440181586.jpg', 'images/201403/goods_img/3_G_1395440181438.jpg', 'images/201403/source_img/3_G_1395440181681.jpg', '1', '', '1', '1', '0', '0', '1395440181', '100', '0', '0', '1', '0', '0', '0', '1400218089', '2', '', '-1', '-1', '0', null);
 INSERT INTO `lego_goods` VALUES ('4', '2', 'ble000004', '法国拉菲庄园法莱利金冠2010干红礼盒 750ml', '+', '2', '0', '', '0', '0.000', '688.00', '188.00', '433.00', '1400400000', '1401436800', '0', '法国 红色 干红', '', '', 'images/201403/thumb_img/4_thumb_G_1395440303705.jpg', 'images/201403/goods_img/4_G_1395440303567.jpg', 'images/201403/source_img/4_G_1395440303194.jpg', '1', '', '1', '1', '0', '0', '1395440303', '100', '0', '0', '0', '1', '1', '0', '1400455252', '2', '', '-1', '-1', '0', null);
 INSERT INTO `lego_goods` VALUES ('5', '2', 'ble000005', '法国拉菲庄园法莱利2011干红单支礼盒 750ml', '+strong', '2', '0', '', '0', '0.000', '560.00', '148.00', '0.00', '0', '0', '0', '法国 红色 干红', '', '', 'images/201403/thumb_img/5_thumb_G_1395444503051.jpg', 'images/201403/goods_img/5_G_1395444503616.jpg', 'images/201403/source_img/5_G_1395444503828.jpg', '1', '', '1', '1', '0', '0', '1395444503', '100', '0', '0', '1', '0', '0', '0', '1400218089', '2', '', '-1', '-1', '0', null);
 INSERT INTO `lego_goods` VALUES ('6', '2', 'ble000006', '中国张裕馆藏干红葡萄酒 750ml', '+', '9', '0', '', '0', '0.000', '118.00', '88.00', '0.00', '0', '0', '0', '中国 红色 干红', '', '', 'images/201403/thumb_img/6_thumb_G_1395444655866.jpg', 'images/201403/goods_img/6_G_1395444655173.jpg', 'images/201403/source_img/6_G_1395444655115.jpg', '1', '', '1', '1', '0', '0', '1395444655', '100', '0', '1', '0', '0', '0', '0', '1400218089', '2', '', '-1', '-1', '0', null);
@@ -1430,12 +1471,14 @@ INSERT INTO `lego_goods` VALUES ('8', '1', 'ble000008', '53°酱领经典捆沙�
 INSERT INTO `lego_goods` VALUES ('9', '1', 'ble000009', '53°汾酒集团20年陈酿（帝王黄）475ml ', '+', '4', '0', '', '0', '0.000', '558.00', '98.00', '0.00', '0', '0', '0', '山西 清香型', '', '', 'images/201403/thumb_img/9_thumb_G_1395447825176.jpg', 'images/201403/goods_img/9_G_1395447825817.jpg', 'images/201403/source_img/9_G_1395447825837.jpg', '1', '', '1', '1', '0', '0', '1395447825', '100', '0', '1', '0', '1', '0', '0', '1400525257', '1', '', '-1', '-1', '0', null);
 INSERT INTO `lego_goods` VALUES ('10', '1', 'ble000010', '52°泸州老窖永盛烧坊老窖专酿红装纪念版 500ml', '+', '0', '0', '', '0', '0.000', '599.00', '199.00', '4623.00', '1400400000', '1401436800', '0', '四川 浓香型', '', '', 'images/201403/thumb_img/10_thumb_G_1395448400369.jpg', 'images/201403/goods_img/10_G_1395448400469.jpg', 'images/201403/source_img/10_G_1395448400706.jpg', '1', '', '1', '1', '0', '0', '1395448400', '100', '0', '0', '0', '1', '1', '0', '1400525256', '1', '', '-1', '-1', '0', null);
 INSERT INTO `lego_goods` VALUES ('11', '1', 'ble000011', '42°白云边十二年陈酿 500ml', '+', '3', '0', '', '0', '0.000', '178.00', '99.00', '0.00', '0', '0', '0', '湖北 其他', '', '', 'images/201403/thumb_img/11_thumb_G_1395448568881.jpg', 'images/201403/goods_img/11_G_1395448568534.jpg', 'images/201403/source_img/11_G_1395448568028.jpg', '1', '', '1', '1', '0', '0', '1395448568', '100', '0', '1', '1', '1', '0', '0', '1400525255', '1', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('12', '3', 'ble000012', '40°百加得超级朗姆酒 750ml', '+', '1', '0', '', '0', '0.000', '141.00', '69.00', '0.00', '0', '0', '0', '美国 朗姆酒', '', '', 'images/201403/thumb_img/12_thumb_G_1395617056053.jpg', 'images/201403/goods_img/12_G_1395617056938.jpg', 'images/201403/source_img/12_G_1395617056308.jpg', '1', '', '1', '1', '0', '0', '1395617056', '100', '0', '1', '0', '1', '0', '0', '1400525256', '3', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('13', '3', 'ble000013', '40°美国深蓝伏特加 750ml', '+', '0', '0', '', '0', '0.000', '120.00', '59.00', '56.00', '1400400000', '1401436800', '0', '美国 伏特加', '', '', 'images/201403/thumb_img/13_thumb_G_1395617424080.jpg', 'images/201403/goods_img/13_G_1395617424444.jpg', 'images/201403/source_img/13_G_1395617424085.jpg', '1', '', '1', '1', '0', '0', '1395617424', '100', '0', '1', '1', '1', '1', '0', '1400524632', '3', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('12', '3', 'ble000012', '40°百加得超级朗姆酒 750ml', '+', '4', '0', '', '0', '0.000', '141.00', '69.00', '0.00', '0', '0', '0', '美国 朗姆酒', '', '', 'images/201403/thumb_img/12_thumb_G_1395617056053.jpg', 'images/201403/goods_img/12_G_1395617056938.jpg', 'images/201403/source_img/12_G_1395617056308.jpg', '1', '', '1', '1', '0', '0', '1395617056', '100', '0', '1', '0', '1', '0', '0', '1400525256', '3', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('13', '3', 'ble000013', '40°美国深蓝伏特加 750ml', '+', '1', '0', '', '0', '0.000', '120.00', '59.00', '56.00', '1400400000', '1401436800', '0', '美国 伏特加', '', '', 'images/201403/thumb_img/13_thumb_G_1395617424080.jpg', 'images/201403/goods_img/13_G_1395617424444.jpg', 'images/201403/source_img/13_G_1395617424085.jpg', '1', '', '1', '1', '0', '0', '1395617424', '100', '0', '1', '1', '1', '1', '0', '1400524632', '3', '', '-1', '-1', '0', null);
 INSERT INTO `lego_goods` VALUES ('14', '3', 'ble000014', '4.8°百加得冰锐朗姆预调酒蓝莓味 275ml', '+', '1', '0', '', '0', '0.000', '16.00', '9.90', '0.00', '0', '0', '0', '美国 预调酒', '', '', 'images/201403/thumb_img/14_thumb_G_1395617579293.jpg', 'images/201403/goods_img/14_G_1395617579641.jpg', 'images/201403/source_img/14_G_1395617579889.jpg', '1', '', '1', '1', '0', '0', '1395617579', '100', '0', '1', '1', '1', '0', '0', '1400525254', '3', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('15', '3', 'ble000015', '40°芝华士12年苏格兰威士忌 700ml ', '+', '0', '0', '', '0', '0.000', '308.00', '199.00', '0.00', '0', '0', '0', '英国 威士忌', '', '', 'images/201403/thumb_img/15_thumb_G_1395617648685.jpg', 'images/201403/goods_img/15_G_1395617648428.jpg', 'images/201403/source_img/15_G_1395617648627.jpg', '1', '', '1', '1', '0', '0', '1395617648', '100', '0', '1', '1', '1', '0', '0', '1400525253', '3', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('16', '3', 'ble000016', '40°轩尼诗VSOP干邑白兰地 700ml', '+', '3', '0', '', '0', '0.000', '490.00', '368.00', '315.00', '1396425600', '1401436800', '0', '法国 白兰地', '', '', 'images/201403/thumb_img/16_thumb_G_1395617729945.jpg', 'images/201403/goods_img/16_G_1395617729480.jpg', 'images/201403/source_img/16_G_1395617729994.jpg', '1', '', '1', '1', '0', '0', '1395617729', '100', '0', '1', '1', '1', '1', '0', '1400524631', '3', '', '-1', '-1', '0', null);
-INSERT INTO `lego_goods` VALUES ('17', '3', 'ble000017', '40°美国杰克丹尼 700ml', '+', '15', '0', '', '0', '0.000', '218.00', '157.00', '137.00', '1396425600', '1398758400', '0', '美国 威士忌', 'JACK DANIELS 杰克·丹尼，世界十大名酒之一。杰克丹尼酒厂1866年诞生于美国田纳西州莲芝堡，是美国第一间注册的蒸馏酒厂。杰克丹尼威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。杰克丹尼酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。', '<p>&nbsp;<strong style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">葡萄酒种类：</strong><span style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">威士忌</span></p>\r\n<p style=\"margin: 0px; padding: 0px; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\"><span data-scayt_word=\"产地：美国\" data-scaytid=\"1473\"><strong>产地：</strong>美国</span>(USA)<br />\r\n<span data-scayt_word=\"葡萄品种：多种优质纯麦调配威士忌\" data-scaytid=\"1536\"><strong>葡萄品种：</strong></span>水、玉米、黑麦、麦芽<br />\r\n<span data-scayt_word=\"级别：知名威士忌品牌\" data-scaytid=\"1476\"><strong>级别：</strong>知名威士忌品牌</span><br />\r\n<strong>酒精度：</strong>40.0%<br />\r\n<span data-scayt_word=\"规格：750ml\" data-scaytid=\"1477\"><strong>规格：</strong>700ml</span><br />\r\n<span data-scayt_word=\"香味：烟熏麦芽、柔滑香草\" data-scaytid=\"1478\"><strong>香味：</strong>烟熏麦芽、柔滑香草</span><br />\r\n<span data-scayt_word=\"色泽：琥珀色\" data-scaytid=\"1519\"><strong>色泽：</strong>琥珀色</span><br />\r\n<span data-scayt_word=\"搭配菜肴：各类中餐菜肴\" data-scaytid=\"1463\"><strong>搭配菜肴：</strong>各类中餐菜肴</span><br />\r\n<span data-scayt_word=\"建议醒酒时间：即开即饮\" data-scaytid=\"1464\"><strong>建议醒酒时间：</strong>即开即饮</span><br />\r\n<span data-scayt_word=\"最佳品尝温度：随意\" data-scaytid=\"1465\"><strong>最佳品尝温度：</strong>随意</span><br />\r\n<span data-scayt_word=\"卖点：美国第一间注册的蒸馏酒厂\" data-scaytid=\"1466\"><strong>卖点：</strong>美国第一间注册的蒸馏酒厂</span><br />\r\n<span data-scayt_word=\"酒品介绍：JACK\" data-scaytid=\"1467\"><strong>酒品介绍：</strong>JACK</span>&nbsp;DANIELS&nbsp;<span data-scayt_word=\"杰克\" data-scaytid=\"1468\">杰克</span>&middot;<span data-scayt_word=\"丹尼\" data-scaytid=\"1469\">丹尼</span>&nbsp;<span data-scayt_word=\"世界十大名酒之一\" data-scaytid=\"1470\">世界十大名酒之一</span>&nbsp;<span class=\"scayt-misspell\" data-scayt_word=\"杰克\" data-scaytid=\"171\">杰克</span><span class=\"scayt-misspell\" data-scayt_word=\"丹尼\" data-scaytid=\"203\">丹尼</span>酒厂1866年诞生于美国田纳西州莲芝堡，是美国第一间注册的蒸馏酒厂。<span class=\"scayt-misspell\" data-scayt_word=\"杰克\" data-scaytid=\"173\">杰克</span><span class=\"scayt-misspell\" data-scayt_word=\"丹尼\" data-scaytid=\"1496\">丹尼</span><span data-scayt_word=\"威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。杰克丹尼酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。\" data-scaytid=\"1479\">威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。<span class=\"scayt-misspell\" data-scayt_word=\"杰克\" data-scaytid=\"175\">杰克</span><span class=\"scayt-misspell\" data-scayt_word=\"丹尼\" data-scaytid=\"1497\">丹尼</span>酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。</span><br />\r\n<span data-scayt_word=\"橡木桶陈酿：3年以上\" data-scaytid=\"1486\"><strong>橡木桶陈酿：</strong>3年以上</span></p>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/11.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">杰克丹尼</b>JACK DANIELS 杰克&middot;丹尼，世界十大名酒之一。杰克丹尼酒厂1866年诞生于美国田纳西州莲芝堡，是美国第一间注册的蒸馏酒厂。杰克丹尼威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。杰克丹尼酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/09.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">OLD NO.7</b>　　杰克丹尼的老饮客也许不会对酒瓶上的&ldquo;OLD NO.7&quot;的字样感到陌生，但很少人可以道出它的来历。也许有知识渊博的人告诉你，这是掷骰子掷出的幸运数字。也有人说，这源于杰克先生的第7次麦芽浆配方实验。更有趣的说过这是关于7桶遗失的威士忌酒，当他们被找到的时候，杰克先生就在上面写上了数字7来做标识。这些说法似乎一个比一个更加有道理，但事实上并没有知道真正的原因。OLD NO.7就像杰克丹尼的酿造秘方。始终是一个不解之谜。就因为如此，杰克丹尼才显得更加的迷人。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/05.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">酿造过程</b>　　杰克丹尼的整个生产的过程都有着极为严格的规定，而且早在选玉米，黑麦和大麦等原料的环节就严格把关。这些谷物用酒厂附近的山泉水加工，成为一种麦芽浆。泉水温度常年保持在华氏56度，不含铁质，但富含石灰质。杰克丹尼的威士忌就是通过古老的，使麦芽浆变酸的方式酿造出来的。当然，这种威士忌不是真正的酸性酒，我们把它叫做酸麦芽浆威士忌酒。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/03.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">酿造过程</b>　　发酵的最后结果就是产生了所谓&ldquo;酿酒人的啤酒&rdquo;，然后把它装进蒸馏器器里提炼。如果把提炼出来的威士忌立即装入桶内存陈，它就可能成为波本威士忌酒。但是，杰克丹尼酿酒厂在提炼出威士忌酒后还把它放在3米厚，用糖枫树烧成的炭上面过滤，于是酒就缓缓的滴下来。恰恰就是这最后一道工序使得杰克丹尼生产的威士忌酒远远的胜过了波本威士忌酒，为杰克丹尼平添了与众不同的味道，并最终获得&ldquo;田纳西威士忌&rdquo;的美名.</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/06.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　杰克丹尼酿酒厂是美国历史上有记载以来最古老的酿酒厂，如今它已经成为美国著名的历史旅游胜地。它于1866年获得营业许可，所酿造的陈年田纳西香醇威士忌一直沿用杰克先生1866年所使用的方法，并始终遵照其创始人的座右铭：&ldquo;滴滴精酿，始终如一。&rdquo;</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/04.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　虽然它只是地处田纳西州仅有300多户人家的林奇堡，然而就是这样一个名不见经传的小镇，却因为威士忌酒而名扬海外，每年都会有源源不断的吸引来自世界各地的威士忌迷聚集在此。1850年，作为家里的第10个孩子的杰克丹尼出生在田纳西的一个大家庭之中。离家出走的他，曾经跟随一个传教士学习酿造威士忌的手艺。此后他在自己十几岁的时候就买下了一座酿酒厂，并在1866年第一个向政府注册。就是在这一年，凭着自己的勤奋和对威士忌一丝不苟的严谨态度，以及南方人特有的朴实诚信，杰克丹尼很快使以自己名字命名的威士忌打开了销路。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/01.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　在杰克丹尼酒厂130年的历史中，除杰克&middot;丹尼本人以外，只有5个人担任酿酒师，本杰明（JimmyBedford）是该厂现任的总酿酒师。对于杰克丹尼的威士忌酒来说，所有出售的酒都经过他的亲自品尝，他品尝时总是将新酿造的酒与陈酒进行比较，以确保威士忌的质量始终不变。该企业品牌在世界品牌实验室（World Brand Lab）编制的2006年度《世界品牌500强》排行榜中名列第一百五十二。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/02.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　如果你想寻找一个地方，仍旧使用传统的滴酿方式制作威士忌，恐怕再也找不出比田纳西西林奇堡杰克丹尼酿酒厂更好的地方。它隐蔽在远离公里的田纳西山谷，很难被人发现。杰克丹尼的历史可以追溯到一个多世纪前，至今仍保持完整，并且还在使用古老的方式来生产威士忌。正如当年杰克先生常说的那样：&ldquo;我们每天都在竭尽所能的生产最好的威士忌。&rdquo;而这一切到今天似乎都没有丝毫的改变。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">获得荣誉</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/10.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">所获荣誉</b>　由杰克丹尼酒厂蒸馏及灌装,秉承自创人杰克丹尼先生的酿酒传统及承诺,相传至今已七代,经典酒质,屡获殊荣： 　　<br />\r\n    1904年圣路易国际展全球最佳威士忌 　　<br />\r\n    1905年比利时皇室金奖 　　<br />\r\n    1914年伦敦欧美博览会金奖 　　<br />\r\n    1954年布鲁塞尔杰出之星 　　<br />\r\n    1981年阿姆斯特丹棕榈叶金奖 　　<br />\r\n    世界上最好的威士忌</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">鸡尾酒调配</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/07.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">　 杰克丹尼</b><br />\r\n    <strong>配方及配料：</strong><br />\r\n    2盎司杰克丹尼<br />\r\n    <strong>调制方法：</strong><br />\r\n    有需要的话，加入冰块，并旋转酒杯，洒上苦精，最后放一片橘子。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">鸡尾酒调配</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/08.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">　 杰克冰镇薄荷酒</b><br />\r\n    <strong>配方及配料：</strong><br />\r\n    2盎司杰克丹尼<br />\r\n    1汤勺糖浆<br />\r\n    新鲜的薄荷<br />\r\n    碎冰块<br />\r\n    <strong>调制方法：</strong><br />\r\n    在调酒杯底部，放入薄荷与糖汁并搅拌，随后填入碎冰块。加入2盎司杰克丹尼，缓慢搅拌，并用薄荷枝作为装饰。</li>\r\n</ul>\r\n<div style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\"><img src=\"http://img05.yesmyimg.com/5146370/00.jpg\" style=\"border: 0px;\" alt=\"\" /></div>\r\n<p><span style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">　</span></p>', 'images/201403/thumb_img/17_thumb_G_1395622052281.jpg', 'images/201403/goods_img/17_G_1395622052071.jpg', 'images/201403/source_img/17_G_1395622052388.jpg', '1', '', '1', '1', '0', '0', '1395622052', '100', '0', '1', '1', '1', '1', '0', '1400525253', '3', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('15', '3', 'ble000015', '40°芝华士12年苏格兰威士忌 700ml ', '+', '1', '0', '', '0', '0.000', '308.00', '199.00', '0.00', '0', '0', '0', '英国 威士忌', '', '', 'images/201403/thumb_img/15_thumb_G_1395617648685.jpg', 'images/201403/goods_img/15_G_1395617648428.jpg', 'images/201403/source_img/15_G_1395617648627.jpg', '1', '', '1', '1', '0', '0', '1395617648', '100', '0', '1', '1', '1', '0', '0', '1400525253', '3', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('16', '3', 'ble000016', '40°轩尼诗VSOP干邑白兰地 700ml', '+', '4', '0', '', '0', '0.000', '490.00', '368.00', '315.00', '1396425600', '1401436800', '0', '法国 白兰地', '', '', 'images/201403/thumb_img/16_thumb_G_1395617729945.jpg', 'images/201403/goods_img/16_G_1395617729480.jpg', 'images/201403/source_img/16_G_1395617729994.jpg', '1', '', '1', '1', '0', '0', '1395617729', '100', '0', '1', '1', '1', '1', '0', '1400524631', '3', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('17', '3', 'ble000017', '40°美国杰克丹尼 700ml', '+', '16', '0', '', '0', '0.000', '218.00', '157.00', '137.00', '1396425600', '1398758400', '0', '美国 威士忌', 'JACK DANIELS 杰克·丹尼，世界十大名酒之一。杰克丹尼酒厂1866年诞生于美国田纳西州莲芝堡，是美国第一间注册的蒸馏酒厂。杰克丹尼威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。杰克丹尼酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。', '<p>&nbsp;<strong style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">葡萄酒种类：</strong><span style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">威士忌</span></p>\r\n<p style=\"margin: 0px; padding: 0px; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\"><span data-scayt_word=\"产地：美国\" data-scaytid=\"1473\"><strong>产地：</strong>美国</span>(USA)<br />\r\n<span data-scayt_word=\"葡萄品种：多种优质纯麦调配威士忌\" data-scaytid=\"1536\"><strong>葡萄品种：</strong></span>水、玉米、黑麦、麦芽<br />\r\n<span data-scayt_word=\"级别：知名威士忌品牌\" data-scaytid=\"1476\"><strong>级别：</strong>知名威士忌品牌</span><br />\r\n<strong>酒精度：</strong>40.0%<br />\r\n<span data-scayt_word=\"规格：750ml\" data-scaytid=\"1477\"><strong>规格：</strong>700ml</span><br />\r\n<span data-scayt_word=\"香味：烟熏麦芽、柔滑香草\" data-scaytid=\"1478\"><strong>香味：</strong>烟熏麦芽、柔滑香草</span><br />\r\n<span data-scayt_word=\"色泽：琥珀色\" data-scaytid=\"1519\"><strong>色泽：</strong>琥珀色</span><br />\r\n<span data-scayt_word=\"搭配菜肴：各类中餐菜肴\" data-scaytid=\"1463\"><strong>搭配菜肴：</strong>各类中餐菜肴</span><br />\r\n<span data-scayt_word=\"建议醒酒时间：即开即饮\" data-scaytid=\"1464\"><strong>建议醒酒时间：</strong>即开即饮</span><br />\r\n<span data-scayt_word=\"最佳品尝温度：随意\" data-scaytid=\"1465\"><strong>最佳品尝温度：</strong>随意</span><br />\r\n<span data-scayt_word=\"卖点：美国第一间注册的蒸馏酒厂\" data-scaytid=\"1466\"><strong>卖点：</strong>美国第一间注册的蒸馏酒厂</span><br />\r\n<span data-scayt_word=\"酒品介绍：JACK\" data-scaytid=\"1467\"><strong>酒品介绍：</strong>JACK</span>&nbsp;DANIELS&nbsp;<span data-scayt_word=\"杰克\" data-scaytid=\"1468\">杰克</span>&middot;<span data-scayt_word=\"丹尼\" data-scaytid=\"1469\">丹尼</span>&nbsp;<span data-scayt_word=\"世界十大名酒之一\" data-scaytid=\"1470\">世界十大名酒之一</span>&nbsp;<span class=\"scayt-misspell\" data-scayt_word=\"杰克\" data-scaytid=\"171\">杰克</span><span class=\"scayt-misspell\" data-scayt_word=\"丹尼\" data-scaytid=\"203\">丹尼</span>酒厂1866年诞生于美国田纳西州莲芝堡，是美国第一间注册的蒸馏酒厂。<span class=\"scayt-misspell\" data-scayt_word=\"杰克\" data-scaytid=\"173\">杰克</span><span class=\"scayt-misspell\" data-scayt_word=\"丹尼\" data-scaytid=\"1496\">丹尼</span><span data-scayt_word=\"威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。杰克丹尼酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。\" data-scaytid=\"1479\">威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。<span class=\"scayt-misspell\" data-scayt_word=\"杰克\" data-scaytid=\"175\">杰克</span><span class=\"scayt-misspell\" data-scayt_word=\"丹尼\" data-scaytid=\"1497\">丹尼</span>酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。</span><br />\r\n<span data-scayt_word=\"橡木桶陈酿：3年以上\" data-scaytid=\"1486\"><strong>橡木桶陈酿：</strong>3年以上</span></p>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/11.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">杰克丹尼</b>JACK DANIELS 杰克&middot;丹尼，世界十大名酒之一。杰克丹尼酒厂1866年诞生于美国田纳西州莲芝堡，是美国第一间注册的蒸馏酒厂。杰克丹尼威士忌畅销全球一百三十多个国家，单瓶销量多年来高踞全球美国威士忌之首。杰克丹尼酒厂位于田纳西州的莲芝堡，是美国最古老的注册酒厂。挑选最上等的玉米、黑麦及麦芽等全天然谷物，配合高山泉水酿制，不含人造成份。采用独特的枫木过滤方法，用新烧制的美国白橡木桶储存，让酒质散发天然独特的馥郁芬芳。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/09.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">OLD NO.7</b>　　杰克丹尼的老饮客也许不会对酒瓶上的&ldquo;OLD NO.7&quot;的字样感到陌生，但很少人可以道出它的来历。也许有知识渊博的人告诉你，这是掷骰子掷出的幸运数字。也有人说，这源于杰克先生的第7次麦芽浆配方实验。更有趣的说过这是关于7桶遗失的威士忌酒，当他们被找到的时候，杰克先生就在上面写上了数字7来做标识。这些说法似乎一个比一个更加有道理，但事实上并没有知道真正的原因。OLD NO.7就像杰克丹尼的酿造秘方。始终是一个不解之谜。就因为如此，杰克丹尼才显得更加的迷人。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/05.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">酿造过程</b>　　杰克丹尼的整个生产的过程都有着极为严格的规定，而且早在选玉米，黑麦和大麦等原料的环节就严格把关。这些谷物用酒厂附近的山泉水加工，成为一种麦芽浆。泉水温度常年保持在华氏56度，不含铁质，但富含石灰质。杰克丹尼的威士忌就是通过古老的，使麦芽浆变酸的方式酿造出来的。当然，这种威士忌不是真正的酸性酒，我们把它叫做酸麦芽浆威士忌酒。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">酒品介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/03.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">酿造过程</b>　　发酵的最后结果就是产生了所谓&ldquo;酿酒人的啤酒&rdquo;，然后把它装进蒸馏器器里提炼。如果把提炼出来的威士忌立即装入桶内存陈，它就可能成为波本威士忌酒。但是，杰克丹尼酿酒厂在提炼出威士忌酒后还把它放在3米厚，用糖枫树烧成的炭上面过滤，于是酒就缓缓的滴下来。恰恰就是这最后一道工序使得杰克丹尼生产的威士忌酒远远的胜过了波本威士忌酒，为杰克丹尼平添了与众不同的味道，并最终获得&ldquo;田纳西威士忌&rdquo;的美名.</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/06.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　杰克丹尼酿酒厂是美国历史上有记载以来最古老的酿酒厂，如今它已经成为美国著名的历史旅游胜地。它于1866年获得营业许可，所酿造的陈年田纳西香醇威士忌一直沿用杰克先生1866年所使用的方法，并始终遵照其创始人的座右铭：&ldquo;滴滴精酿，始终如一。&rdquo;</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/04.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　虽然它只是地处田纳西州仅有300多户人家的林奇堡，然而就是这样一个名不见经传的小镇，却因为威士忌酒而名扬海外，每年都会有源源不断的吸引来自世界各地的威士忌迷聚集在此。1850年，作为家里的第10个孩子的杰克丹尼出生在田纳西的一个大家庭之中。离家出走的他，曾经跟随一个传教士学习酿造威士忌的手艺。此后他在自己十几岁的时候就买下了一座酿酒厂，并在1866年第一个向政府注册。就是在这一年，凭着自己的勤奋和对威士忌一丝不苟的严谨态度，以及南方人特有的朴实诚信，杰克丹尼很快使以自己名字命名的威士忌打开了销路。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/01.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　在杰克丹尼酒厂130年的历史中，除杰克&middot;丹尼本人以外，只有5个人担任酿酒师，本杰明（JimmyBedford）是该厂现任的总酿酒师。对于杰克丹尼的威士忌酒来说，所有出售的酒都经过他的亲自品尝，他品尝时总是将新酿造的酒与陈酒进行比较，以确保威士忌的质量始终不变。该企业品牌在世界品牌实验室（World Brand Lab）编制的2006年度《世界品牌500强》排行榜中名列第一百五十二。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">品牌介绍</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/02.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">品牌介绍</b>　　如果你想寻找一个地方，仍旧使用传统的滴酿方式制作威士忌，恐怕再也找不出比田纳西西林奇堡杰克丹尼酿酒厂更好的地方。它隐蔽在远离公里的田纳西山谷，很难被人发现。杰克丹尼的历史可以追溯到一个多世纪前，至今仍保持完整，并且还在使用古老的方式来生产威士忌。正如当年杰克先生常说的那样：&ldquo;我们每天都在竭尽所能的生产最好的威士忌。&rdquo;而这一切到今天似乎都没有丝毫的改变。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">获得荣誉</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/10.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">所获荣誉</b>　由杰克丹尼酒厂蒸馏及灌装,秉承自创人杰克丹尼先生的酿酒传统及承诺,相传至今已七代,经典酒质,屡获殊荣： 　　<br />\r\n    1904年圣路易国际展全球最佳威士忌 　　<br />\r\n    1905年比利时皇室金奖 　　<br />\r\n    1914年伦敦欧美博览会金奖 　　<br />\r\n    1954年布鲁塞尔杰出之星 　　<br />\r\n    1981年阿姆斯特丹棕榈叶金奖 　　<br />\r\n    世界上最好的威士忌</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">鸡尾酒调配</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img15.yesmyimg.com/5146370/07.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">　 杰克丹尼</b><br />\r\n    <strong>配方及配料：</strong><br />\r\n    2盎司杰克丹尼<br />\r\n    <strong>调制方法：</strong><br />\r\n    有需要的话，加入冰块，并旋转酒杯，洒上苦精，最后放一片橘子。</li>\r\n</ul>\r\n<h3 style=\"margin: 10px 0px 19px; padding: 0px 0px 0px 20px; font-size: 16px; background-image: url(http://img12.yesmywine.com/newWeb/images/discretion/titleBg.jpg); background-attachment: scroll; border-style: solid; border-width: 1px 1px 2px; border-color: rgb(230, 225, 219) rgb(230, 225, 219) rgb(116, 70, 58); float: left; width: 918px; height: 29px; color: rgb(51, 51, 51); line-height: 29px; overflow: hidden; font-family: Arial; background-position: 0px 0px; background-repeat: repeat no-repeat;\">鸡尾酒调配</h3>\r\n<ul style=\"margin: 0px 0px 11px; padding: 0px; list-style: none; color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">\r\n    <li class=\"i\" style=\"margin: 0px; padding: 0px; float: left; width: 330px;\"><img src=\"http://img05.yesmyimg.com/5146370/08.jpg\" style=\"border: medium none; height: 230px; width: 330px;\" alt=\"\" /></li>\r\n    <li class=\"des\" style=\"margin: 0px 0px 0px 330px; padding: 0px 0px 0px 15px; float: none; color: rgb(101, 101, 105); line-height: 22px; font-family: 宋体; min-height: 230px;\"><b style=\"display: block; font-size: 14px;\">　 杰克冰镇薄荷酒</b><br />\r\n    <strong>配方及配料：</strong><br />\r\n    2盎司杰克丹尼<br />\r\n    1汤勺糖浆<br />\r\n    新鲜的薄荷<br />\r\n    碎冰块<br />\r\n    <strong>调制方法：</strong><br />\r\n    在调酒杯底部，放入薄荷与糖汁并搅拌，随后填入碎冰块。加入2盎司杰克丹尼，缓慢搅拌，并用薄荷枝作为装饰。</li>\r\n</ul>\r\n<div style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\"><img src=\"http://img05.yesmyimg.com/5146370/00.jpg\" style=\"border: 0px;\" alt=\"\" /></div>\r\n<p><span style=\"color: rgb(131, 131, 131); font-family: Arial; line-height: 19.200000762939453px;\">　</span></p>', 'images/201403/thumb_img/17_thumb_G_1395622052281.jpg', 'images/201403/goods_img/17_G_1395622052071.jpg', 'images/201403/source_img/17_G_1395622052388.jpg', '1', '', '1', '1', '0', '0', '1395622052', '100', '0', '1', '1', '1', '1', '0', '1400525253', '3', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('18', '28', 'ble000018', '精品酒刀海马酒刀红酒开瓶器', '+', '0', '0', '', '0', '0.000', '7.00', '5.00', '0.00', '0', '0', '0', '', '', '', 'images/201405/thumb_img/18_thumb_G_1400691436455.jpg', 'images/201405/goods_img/18_G_1400691436867.jpg', 'images/201405/source_img/18_G_1400691436050.jpg', '1', '', '1', '1', '0', '5', '1400691180', '100', '0', '0', '0', '0', '0', '0', '1400691929', '0', '', '-1', '-1', '0', null);
+INSERT INTO `lego_goods` VALUES ('19', '28', 'ble000019', '黑色按压式真空塞', '+', '0', '0', '', '0', '0.000', '14.00', '12.00', '0.00', '0', '0', '0', '', '', '', 'images/201405/thumb_img/19_thumb_G_1400691461610.jpg', 'images/201405/goods_img/19_G_1400691461900.jpg', 'images/201405/source_img/19_G_1400691461969.jpg', '1', '', '1', '1', '0', '12', '1400691372', '100', '0', '0', '0', '0', '0', '0', '1400691940', '0', '', '-1', '-1', '0', null);
 
 -- ----------------------------
 -- Table structure for `lego_goods_activity`
@@ -1567,7 +1610,7 @@ CREATE TABLE `lego_goods_gallery` (
   `img_original` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`img_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_goods_gallery
@@ -1589,6 +1632,8 @@ INSERT INTO `lego_goods_gallery` VALUES ('15', '14', 'images/201403/goods_img/14
 INSERT INTO `lego_goods_gallery` VALUES ('16', '15', 'images/201403/goods_img/15_P_1395617648103.jpg', '', 'images/201403/thumb_img/15_thumb_P_1395617648903.jpg', 'images/201403/source_img/15_P_1395617648950.jpg');
 INSERT INTO `lego_goods_gallery` VALUES ('17', '16', 'images/201403/goods_img/16_P_1395617729607.jpg', '', 'images/201403/thumb_img/16_thumb_P_1395617729623.jpg', 'images/201403/source_img/16_P_1395617729114.jpg');
 INSERT INTO `lego_goods_gallery` VALUES ('18', '17', 'images/201403/goods_img/17_P_1395622052526.jpg', '', 'images/201403/thumb_img/17_thumb_P_1395622052452.jpg', 'images/201403/source_img/17_P_1395622052253.jpg');
+INSERT INTO `lego_goods_gallery` VALUES ('19', '18', 'images/201405/goods_img/18_P_1400691436261.jpg', '', 'images/201405/thumb_img/18_thumb_P_1400691436478.jpg', 'images/201405/source_img/18_P_1400691436652.jpg');
+INSERT INTO `lego_goods_gallery` VALUES ('20', '19', 'images/201405/goods_img/19_P_1400691461668.jpg', '', 'images/201405/thumb_img/19_thumb_P_1400691461674.jpg', 'images/201405/source_img/19_P_1400691461551.jpg');
 
 -- ----------------------------
 -- Table structure for `lego_goods_type`
@@ -1641,6 +1686,7 @@ CREATE TABLE `lego_keywords` (
 -- Records of lego_keywords
 -- ----------------------------
 INSERT INTO `lego_keywords` VALUES ('2014-03-22', 'ecshop', '42', '1');
+INSERT INTO `lego_keywords` VALUES ('2014-05-20', 'ecshop', 'aa', '1');
 
 -- ----------------------------
 -- Table structure for `lego_link_goods`
@@ -1756,7 +1802,7 @@ CREATE TABLE `lego_order_action` (
   `log_time` int(11) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`action_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_order_action
@@ -1767,6 +1813,18 @@ INSERT INTO `lego_order_action` VALUES ('3', '1', 'admin', '1', '1', '0', '1', '
 INSERT INTO `lego_order_action` VALUES ('4', '1', '买家', '5', '2', '0', '0', '', '1400396299');
 INSERT INTO `lego_order_action` VALUES ('5', '1', 'admin', '1', '2', '2', '0', 'afd', '1400396318');
 INSERT INTO `lego_order_action` VALUES ('6', '1', 'admin', '1', '2', '2', '0', '[售后] asd', '1400396326');
+INSERT INTO `lego_order_action` VALUES ('7', '2', 'admin', '1', '0', '0', '0', '', '1400654828');
+INSERT INTO `lego_order_action` VALUES ('8', '2', 'admin', '5', '5', '0', '0', '', '1400654832');
+INSERT INTO `lego_order_action` VALUES ('9', '2', 'admin', '1', '1', '0', '1', '', '1400654841');
+INSERT INTO `lego_order_action` VALUES ('10', '2', '买家', '5', '2', '0', '0', '', '1400654851');
+INSERT INTO `lego_order_action` VALUES ('11', '2', 'admin', '5', '2', '0', '0', '[售后] eg', '1400654867');
+INSERT INTO `lego_order_action` VALUES ('12', '3', 'admin', '5', '5', '0', '0', '', '1400656679');
+INSERT INTO `lego_order_action` VALUES ('13', '3', 'admin', '1', '1', '0', '1', '', '1400656686');
+INSERT INTO `lego_order_action` VALUES ('14', '3', '买家', '5', '2', '0', '0', '', '1400656694');
+INSERT INTO `lego_order_action` VALUES ('15', '4', 'admin', '5', '5', '0', '0', '', '1400656774');
+INSERT INTO `lego_order_action` VALUES ('16', '4', 'admin', '1', '1', '0', '1', '', '1400656782');
+INSERT INTO `lego_order_action` VALUES ('17', '4', '买家', '5', '2', '0', '0', '', '1400656789');
+INSERT INTO `lego_order_action` VALUES ('18', '4', 'admin', '5', '2', '0', '0', '[售后] sdafads', '1400656800');
 
 -- ----------------------------
 -- Table structure for `lego_order_goods`
@@ -1792,13 +1850,16 @@ CREATE TABLE `lego_order_goods` (
   PRIMARY KEY (`rec_id`),
   KEY `order_id` (`order_id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_order_goods
 -- ----------------------------
 INSERT INTO `lego_order_goods` VALUES ('1', '1', '1', '法国马蒂隆1907干红葡萄酒 750ml', 'ble000000', '0', '1', '320.00', '88.00', '', '1', '1', '', '0', '0', '');
 INSERT INTO `lego_order_goods` VALUES ('2', '1', '2', '法国拉菲庄园法莱利经典干红葡萄酒 750ml', 'ble000002', '0', '1', '538.00', '99.00', '', '1', '1', '', '0', '0', '');
+INSERT INTO `lego_order_goods` VALUES ('3', '2', '16', '40°轩尼诗VSOP干邑白兰地 700ml', 'ble000016', '0', '1', '490.00', '315.00', '', '1', '1', '', '0', '0', '');
+INSERT INTO `lego_order_goods` VALUES ('4', '3', '12', '40°百加得超级朗姆酒 750ml', 'ble000012', '0', '1', '141.00', '69.00', '', '1', '1', '', '0', '0', '');
+INSERT INTO `lego_order_goods` VALUES ('5', '4', '13', '40°美国深蓝伏特加 750ml', 'ble000013', '0', '10', '120.00', '56.00', '', '10', '1', '', '0', '0', '');
 
 -- ----------------------------
 -- Table structure for `lego_order_info`
@@ -1877,12 +1938,15 @@ CREATE TABLE `lego_order_info` (
   KEY `pay_id` (`pay_id`),
   KEY `extension_code` (`extension_code`,`extension_id`),
   KEY `agency_id` (`agency_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_order_info
 -- ----------------------------
 INSERT INTO `lego_order_info` VALUES ('1', '2014051814199', '1', '1', '2', '2', '啊啊', '1', '2', '52', '502', '啊啊啊啊啊啊', '', '11111111111', '', '', '', '', '', '1', '市内快递', '1', '货到付款', '等待所有商品备齐后再发', '', '', '', '', '', '', '187.00', '0.00', '0.00', '0.00', '0.00', '0.00', '187.00', '0.00', '0', '0.00', '0.00', '0.00', '0', '本站', '1400396252', '1400396318', '1400396318', '1400396275', '0', '0', '0', '', '', '0', '', '', '0', '', '0.00', '0', '0', '0.00');
+INSERT INTO `lego_order_info` VALUES ('2', '2014052154400', '2', '5', '2', '0', 'wcd', '1', '11', '150', '1271', 'wcd', '342', '2141', '23423', '774241885@qq.com', 'wcd', 'dd', '', '1', '市内快递', '1', '货到付款', '等待所有商品备齐后再发', '', '', '', '', '', '', '315.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0', '0.00', '0.00', '315.00', '3', '本站', '1400654819', '1400654828', '0', '1400654841', '0', '0', '0', '', '', '0', '', '', '0', '', '0.00', '0', '0', '0.00');
+INSERT INTO `lego_order_info` VALUES ('3', '2014052150829', '2', '5', '2', '0', 'wcd', '1', '11', '150', '1271', 'wcd', '342', '2141', '23423', '774241885@qq.com', 'wcd', 'dd', '', '1', '市内快递', '1', '货到付款', '等待所有商品备齐后再发', '', '', '', '', '', '', '69.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0', '0.00', '0.00', '69.00', '3', '本站', '1400656670', '1400656679', '0', '1400656686', '0', '0', '0', '', '', '0', '', '', '0', '', '0.00', '0', '0', '0.00');
+INSERT INTO `lego_order_info` VALUES ('4', '2014052121478', '2', '5', '2', '0', 'wcd', '1', '11', '150', '1271', 'wcd', '342', '2141', '23423', '774241885@qq.com', 'wcd', 'dd', '', '1', '市内快递', '1', '货到付款', '等待所有商品备齐后再发', '', '', '', '', '', '', '560.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0', '0.00', '0.00', '560.00', '3', '本站', '1400656766', '1400656774', '0', '1400656782', '0', '0', '0', '', '', '0', '', '', '0', '', '0.00', '0', '0', '0.00');
 
 -- ----------------------------
 -- Table structure for `lego_pack`
@@ -1930,12 +1994,15 @@ CREATE TABLE `lego_pay_log` (
   `order_type` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `is_paid` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`log_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_pay_log
 -- ----------------------------
 INSERT INTO `lego_pay_log` VALUES ('1', '1', '187.00', '0', '0');
+INSERT INTO `lego_pay_log` VALUES ('2', '2', '315.00', '0', '0');
+INSERT INTO `lego_pay_log` VALUES ('3', '3', '69.00', '0', '0');
+INSERT INTO `lego_pay_log` VALUES ('4', '4', '560.00', '0', '0');
 
 -- ----------------------------
 -- Table structure for `lego_payment`
@@ -5517,8 +5584,6 @@ CREATE TABLE `lego_sessions` (
 -- ----------------------------
 -- Records of lego_sessions
 -- ----------------------------
-INSERT INTO `lego_sessions` VALUES ('8da913b21fa11e008769e576017e82d4', '1400578374', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:5:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:14:\"display_search\";s:4:\"grid\";s:12:\"captcha_word\";s:16:\"Nzk3ZmVlNGMxOA==\";}');
-INSERT INTO `lego_sessions` VALUES ('23b6ea425daaabfbb2cbdee02cfa3845', '1400578355', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1400549535;s:12:\"suppliers_id\";s:1:\"0\";}');
 
 -- ----------------------------
 -- Table structure for `lego_sessions_data`
@@ -5540,6 +5605,7 @@ INSERT INTO `lego_sessions_data` VALUES ('a2f613ec076fcd0872b69e004433f034', '42
 INSERT INTO `lego_sessions_data` VALUES ('7f2feeae6043839f789eda44bdbed64a', '4294967295', 'a:10:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:13:\"captcha_login\";s:16:\"OGIyYjA5YTllMw==\";s:9:\"last_time\";s:10:\"1396917631\";s:7:\"last_ip\";s:9:\"127.0.0.1\";s:12:\"captcha_word\";s:16:\"ZmQ0OWJmNjUwMQ==\";s:9:\"flow_type\";i:0;s:10:\"flow_order\";a:8:{s:14:\"extension_code\";s:0:\"\";s:11:\"shipping_id\";i:1;s:6:\"pay_id\";i:1;s:7:\"pack_id\";i:0;s:7:\"card_id\";i:0;s:5:\"bonus\";i:0;s:8:\"integral\";i:0;s:7:\"surplus\";i:0;}s:14:\"flow_consignee\";a:14:{s:10:\"address_id\";s:1:\"1\";s:9:\"consignee\";s:6:\"啊啊\";s:7:\"country\";s:1:\"1\";s:8:\"province\";s:1:\"2\";s:4:\"city\";s:2:\"52\";s:8:\"district\";s:3:\"502\";s:5:\"email\";s:0:\"\";s:7:\"address\";s:18:\"啊啊啊啊啊啊\";s:7:\"zipcode\";s:0:\"\";s:3:\"tel\";s:11:\"11111111111\";s:6:\"mobile\";s:0:\"\";s:13:\"sign_building\";s:0:\"\";s:9:\"best_time\";s:0:\"\";s:7:\"user_id\";s:1:\"1\";}}');
 INSERT INTO `lego_sessions_data` VALUES ('06bf9f5add58d4af502fab4373b88c93', '4294967295', 'a:10:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:12:\"captcha_word\";s:16:\"M2Q0YzdiNDA3MA==\";s:9:\"flow_type\";i:0;s:10:\"flow_order\";a:8:{s:14:\"extension_code\";s:0:\"\";s:11:\"shipping_id\";i:1;s:6:\"pay_id\";i:0;s:7:\"pack_id\";i:0;s:7:\"card_id\";i:0;s:5:\"bonus\";i:0;s:8:\"integral\";i:0;s:7:\"surplus\";i:0;}s:13:\"captcha_login\";s:16:\"MWQxNTlkZTk5Ng==\";s:9:\"last_time\";s:10:\"1396918248\";s:7:\"last_ip\";s:9:\"127.0.0.1\";s:14:\"flow_consignee\";a:15:{s:10:\"address_id\";s:1:\"1\";s:12:\"address_name\";s:0:\"\";s:7:\"user_id\";s:1:\"1\";s:9:\"consignee\";s:6:\"啊啊\";s:5:\"email\";s:0:\"\";s:7:\"country\";s:1:\"1\";s:8:\"province\";s:1:\"2\";s:4:\"city\";s:2:\"52\";s:8:\"district\";s:3:\"502\";s:7:\"address\";s:18:\"啊啊啊啊啊啊\";s:7:\"zipcode\";s:0:\"\";s:3:\"tel\";s:11:\"11111111111\";s:6:\"mobile\";s:0:\"\";s:13:\"sign_building\";s:0:\"\";s:9:\"best_time\";s:0:\"\";}}');
 INSERT INTO `lego_sessions_data` VALUES ('ccfdd4afa94789db485874c26f1cc012', '4294967295', 'a:8:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:12:\"captcha_word\";s:16:\"YTAwNzdlMDhiNA==\";s:9:\"flow_type\";i:0;s:13:\"captcha_login\";s:16:\"OWU5MDRhYzc2OQ==\";s:9:\"last_time\";s:10:\"1397063960\";s:7:\"last_ip\";s:9:\"127.0.0.1\";}');
+INSERT INTO `lego_sessions_data` VALUES ('3ffca26e398823ca8b3f7d01aef481eb', '4294967295', 'a:8:{s:7:\"from_ad\";i:3;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:12:\"captcha_word\";s:16:\"ZmE5MTE3OGEyMA==\";s:9:\"flow_type\";i:0;s:13:\"captcha_login\";s:16:\"MjFkOTkwOTEwMQ==\";s:9:\"last_time\";i:1400654846;s:7:\"last_ip\";s:0:\"\";}');
 
 -- ----------------------------
 -- Table structure for `lego_shipping`
@@ -5923,6 +5989,23 @@ INSERT INTO `lego_stats` VALUES ('1400545741', '127.0.0.1', '35', 'FireFox 29.0'
 INSERT INTO `lego_stats` VALUES ('1400546397', '127.0.0.1', '36', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/5.18/9legoweb/', '/5.18/9legoweb/category.php');
 INSERT INTO `lego_stats` VALUES ('1400546409', '127.0.0.1', '37', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/99gui/category-2-b0-min160-max180-attr0.2.16.html', '/99gui/category.php');
 INSERT INTO `lego_stats` VALUES ('1400546799', '127.0.0.1', '38', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/99gui/category-2-b0-min180-max200-attr0.2.16.html', '/99gui/category.php');
+INSERT INTO `lego_stats` VALUES ('1400564512', '127.0.0.1', '15', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400565347', '127.0.0.1', '16', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/5.20/index.php');
+INSERT INTO `lego_stats` VALUES ('1400565573', '127.0.0.1', '17', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/99gui/index.php', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400646011', '127.0.0.1', '18', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400653938', '127.0.0.1', '19', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/99gui/index.php', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400659918', '127.0.0.1', '20', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/99gui/mgr/index.php?act=top', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400662050', '127.0.0.1', '1', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', '', '', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400690959', '127.0.0.1', '46', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400692579', '127.0.0.1', '47', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400698569', '127.0.0.1', '3', 'Internet Explorer 9.0', 'Windows NT', 'zh-CN', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400698734', '127.0.0.1', '39', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400698787', '127.0.0.1', '3', 'Safari 537.1', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/99gui/index.php', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400698829', '127.0.0.1', '4', 'Safari 537.1', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400698844', '127.0.0.1', '40', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/', '/99gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400699175', '127.0.0.1', '42', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/99gui/', '/99gui/search.php');
+INSERT INTO `lego_stats` VALUES ('1400700171', '127.0.0.1', '48', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/9gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400701309', '127.0.0.1', '49', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/9gui/index.php');
 
 -- ----------------------------
 -- Table structure for `lego_suppliers`
@@ -6002,18 +6085,20 @@ INSERT INTO `lego_template` VALUES ('category', '右边区域', '/library/pages.
 INSERT INTO `lego_template` VALUES ('category', '左边区域', '/library/cart.lbi', '0', '0', '0', '0', 'default', '');
 INSERT INTO `lego_template` VALUES ('category', '左边区域', '/library/price_grade.lbi', '3', '0', '0', '0', 'default', '');
 INSERT INTO `lego_template` VALUES ('category', '左边区域', '/library/filter_attr.lbi', '2', '0', '0', '0', 'default', '');
-INSERT INTO `lego_template` VALUES ('index', '文章列表上', '/library/ad_position.lbi', '0', '3', '2', '4', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('search', '左边区域', '/library/category_tree.lbi', '0', '0', '0', '0', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '首页分类下广告', '/library/ad_position.lbi', '1', '4', '3', '4', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '文章列表', '/library/cat_articles.lbi', '2', '13', '7', '3', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '左边区域', '/library/ad_position.lbi', '0', '1', '1', '4', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '品牌馆', '/library/ad_position.lbi', '0', '2', '5', '4', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '首页分类下广告', '/library/ad_position.lbi', '0', '4', '1', '4', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '文章列表', '/library/cat_articles.lbi', '0', '11', '7', '3', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '下左边区域', '/library/ad_position.lbi', '0', '6', '1', '4', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '品牌馆', '/library/ad_position.lbi', '0', '2', '5', '4', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '左边区域', '/library/ad_position.lbi', '0', '1', '1', '4', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '文章列表', '/library/cat_articles.lbi', '2', '13', '7', '3', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '文章列表', '/library/cat_articles.lbi', '1', '12', '7', '3', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '2', '3', '5', '1', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '1', '1', '5', '1', 'red_two', '');
-INSERT INTO `lego_template` VALUES ('index', '全宽行', '/library/cat_goods.lbi', '0', '2', '5', '1', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '文章列表', '/library/cat_articles.lbi', '0', '11', '7', '3', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '商品分类列表', '/library/cat_goods.lbi', '4', '5', '10', '1', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '商品分类列表', '/library/cat_goods.lbi', '3', '3', '10', '1', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '商品分类列表', '/library/cat_goods.lbi', '0', '1', '5', '1', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '商品分类列表', '/library/cat_goods.lbi', '1', '1', '10', '1', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '商品分类列表', '/library/cat_goods.lbi', '2', '2', '10', '1', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '品牌馆', '/library/brands.lbi', '1', '0', '20', '0', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '', '/library/auction.lbi', '0', '0', '3', '0', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '', '/library/group_buy.lbi', '0', '0', '3', '0', 'red_two', '');
@@ -6021,6 +6106,8 @@ INSERT INTO `lego_template` VALUES ('index', '', '/library/recommend_promotion.l
 INSERT INTO `lego_template` VALUES ('index', '', '/library/recommend_hot.lbi', '0', '0', '10', '0', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '', '/library/recommend_new.lbi', '0', '0', '10', '0', 'red_two', '');
 INSERT INTO `lego_template` VALUES ('index', '', '/library/recommend_best.lbi', '0', '0', '10', '0', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '下左边区域', '/library/top10.lbi', '1', '0', '0', '0', 'red_two', '');
+INSERT INTO `lego_template` VALUES ('index', '文章列表上', '/library/ad_position.lbi', '0', '3', '2', '4', 'red_two', '');
 
 -- ----------------------------
 -- Table structure for `lego_topic`
@@ -6095,7 +6182,7 @@ CREATE TABLE `lego_user_address` (
   `best_time` varchar(120) NOT NULL DEFAULT '',
   PRIMARY KEY (`address_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_user_address
@@ -6104,6 +6191,7 @@ INSERT INTO `lego_user_address` VALUES ('1', '', '1', '啊啊', '', '1', '2', '5
 INSERT INTO `lego_user_address` VALUES ('2', '', '1', '阿斯顿', '', '1', '3', '36', '398', '事实上', '', '11111111111', '', '', '');
 INSERT INTO `lego_user_address` VALUES ('3', '', '1', '啊啊啊', '', '1', '11', '150', '1268', '阿斯顿', '', '11111111111', '', '', '');
 INSERT INTO `lego_user_address` VALUES ('4', '', '1', '啊十大是', '', '1', '19', '258', '2162', '啊十大是', '', '11111111111', '', '', '');
+INSERT INTO `lego_user_address` VALUES ('5', '', '2', 'wcd', '774241885@qq.com', '1', '11', '150', '1271', 'wcd', '342', '2141', '23423', 'dd', 'wcd');
 
 -- ----------------------------
 -- Table structure for `lego_user_bonus`
@@ -6207,12 +6295,13 @@ CREATE TABLE `lego_users` (
   KEY `email` (`email`),
   KEY `parent_id` (`parent_id`),
   KEY `flag` (`flag`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_users
 -- ----------------------------
 INSERT INTO `lego_users` VALUES ('1', 'test@test.com', 'test', 'f215f869362798c5d94777bc94d5bdfc', '', '', '0', '1954-01-01', '0.00', '0.00', '187', '187', '1', '1395428781', '1400396225', '0000-00-00 00:00:00', '127.0.0.1', '8', '0', '0', '3965', '0', '0', '0', '', '', '', '', '', '', '0', '0.00', null, null);
+INSERT INTO `lego_users` VALUES ('2', '774241885@qq.com', 'wcd', '98049d687ac4100931ee4fc6f47626fe', '', '', '0', '1954-01-01', '0.00', '0.00', '944', '944', '5', '1400654751', '1400654763', '0000-00-00 00:00:00', '127.0.0.1', '1', '0', '0', '3669', '0', '0', '0', '', '', '', '', '', '', '0', '0.00', null, null);
 
 -- ----------------------------
 -- Table structure for `lego_virtual_card`

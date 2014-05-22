@@ -201,7 +201,7 @@
 							</b></span>
 							<span class="gl-p-r"><del><?php echo $this->_var['goods']['market_price']; ?></del></span>
                             <?php echo $this->smarty_insert_scripts(array('files'=>'lefttime.js')); ?>
-                            <br/><?php echo $this->_var['lang']['residual_time']; ?><span class="rs_jq_timer"><?php echo $this->_var['lang']['please_waiting']; ?></span>
+                            <font class="f4" id="leftTime"><?php echo $this->_var['lang']['please_waiting']; ?></font><br />
 						</div>
 					</div>
 				</li>
