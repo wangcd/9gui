@@ -1,0 +1,41 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+			<!-- 竖导航start -->
+
+<ul class="catetree-list">
+<!--{foreach from=$categories item=cat name=no}-->
+	<li>
+		<h3><span>&gt;</span><a href="{$cat.url}" target="_blank">{$cat.name|escape:html}</a></h3>
+		<p>
+        <!--{foreach from=$cat.cat_id item=rs_child name=rs_childs}-->
+        	<a href="{$rs_child.url}" target="_blank">{$rs_child.name|escape:html}</a>
+        <!--{/foreach}-->    
+        </p>
+	</li>
+<!--{/foreach}--> 
+</ul>
+
+			<!-- 竖导航end -->
+<script type="text/javascript">
+	$(function($) {
+		$(".catetree-list li").hover(
+			function(){
+				$(this).addClass("current");
+			},
+			function(){
+				$(this).removeClass("current");
+			}
+		);
+	});
+
+			$(function(){
+				$(".category_li,.idxban-left").hover(
+					function(){
+						$(".idxban-left").show();
+					},
+					function(){
+						$(".idxban-left").hide();
+					}
+				);			
+			});	
+</script>

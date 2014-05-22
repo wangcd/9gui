@@ -1,0 +1,29 @@
+<div class="search_list">
+	<div class="search_title">
+    	<span>价格</span>
+    	<a href="#">　　重新筛选</a>
+    </div>
+    <div class="search_con">
+    	<div class="search_con_list">
+        	<div class="fenl">{$lang.price} :</div>
+            <div class="fenl_list">
+            	<div><a href=""><span class="fenl_list_fir">全部</span></a></div>
+                <!--{foreach from=$price_grade item=grade}-->
+                <div><a href="{$grade.url}">{$grade.price_range}</a></div>
+                <!--{/foreach}-->
+            </div>
+        </div>
+        <!--{foreach from=$filter_attr_list item=filter_attr}-->
+        <div class="search_con_list">
+        	<div class="fenl">{$filter_attr.filter_attr_name|escape:html} :</div>
+            <div class="fenl_list">
+            	<div><a href="" class=""><span class="fenl_list_fir">全部</span></a></div>
+                <!--{foreach from=$filter_attr.attr_list item=attr}-->
+                <div><a href="{$attr.url}">{$attr.attr_value}</a></div>
+                <!--{/foreach}-->
+            </div>        
+        </div>
+        <!--{/foreach}-->
+    </div>
+</div>
+

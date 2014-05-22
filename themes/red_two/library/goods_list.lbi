@@ -1,0 +1,97 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box">
+ <div class="box_1">
+  <h3>
+  <span>{$lang.goods_list}</span>
+  <form method="GET" class="sort" name="listform">
+ 
+  <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"></a>
+  <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"></a>
+  <a href="category.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/last_update_<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.last_update}"></a>
+
+  <input type="hidden" name="category" value="{$category}" />
+  <input type="hidden" name="display" value="{$pager.display}" id="display" />
+  <input type="hidden" name="brand" value="{$brand_id}" />
+  <input type="hidden" name="price_min" value="{$price_min}" />
+  <input type="hidden" name="price_max" value="{$price_max}" />
+  <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+  <input type="hidden" name="page" value="{$pager.page}" />
+  <input type="hidden" name="sort" value="{$pager.sort}" />
+  <input type="hidden" name="order" value="{$pager.order}" />
+
+    </form>
+  </h3>
+
+
+				<div class="clearfix goodsBox" style="border:none; padding:18px 0 10px 0px;">
+					<ul class="goodslist-cate">
+						<!--{foreach from=$goods_list item=goods}-->
+						<!-- {if $goods.goods_id} -->
+						<li>
+							<div class="gl-img">
+								<a href="{$goods.url}">
+									<!-- {if $goods.discount_rate gt 0} -->
+									<b class="gl-water">{$goods.discount_rate}折</b>
+									<!--{/if}-->
+									<img style="border:none;" src="{$goods.goods_thumb}" alt="{$goods.name|escape:html}">
+								</a>
+								<!--{if !empty($goods.goods_brief)}-->
+								<div class="gl-abst-disc"><p>{$goods.goods_brief}</p></div>
+								<!--{/if}-->
+							</div>
+							<div class="gl-name-p">
+								<div class="gl-name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></div>
+								<div class="gl-price">
+									<span class="gl-p-l"><b>
+									<!-- {if $goods.promote_price neq ""} -->
+									{$goods.promote_price}
+									<!-- {else}-->
+									{$goods.shop_price}
+									<!--{/if}-->
+									</b></span>
+									<span class="gl-p-r"><del>{$goods.market_price}</del></span>
+								</div>
+							</div>
+						</li>
+						<!--{/if}-->
+						<!--{/foreach}-->
+					</ul>
+				</div>
+
+
+
+
+
+
+
+ </div>
+</div>
+<div class="blank5"></div>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>

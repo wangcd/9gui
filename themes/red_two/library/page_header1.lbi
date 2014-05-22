@@ -1,0 +1,108 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+
+<!--顶部导航-->
+<script type="text/javascript">
+          //初始化主菜单
+            function sw_nav(obj,tag)
+            {
+     
+            var DisSub = document.getElementById("DisSub_"+obj);
+            var HandleLI= document.getElementById("HandleLI_"+obj);
+                if(tag==1)
+                {
+                    DisSub.style.display = "block";
+             
+                    
+                }
+                else
+                {
+                    DisSub.style.display = "none";
+                
+                }
+     
+            }
+     
+</script>
+
+{insert_scripts files='jquery-1.8.3.min.js,jquery.json-2.4.min.js,transport.js,utils.js'}
+<script type="text/javascript">
+{literal}
+<!--
+$(function($) {
+	$("#search_input_btn").on("click",function(){
+		$("#searchForm").submit();
+	});
+	
+	$(".goodslist li,.goodslist-cate li").hover(
+		function(){
+			$(this).addClass("gl-li-focus");
+		},
+		function(){
+			$(this).removeClass("gl-li-focus");
+		}
+	);
+	$('#brandWall .bxdl-list a').each(function(){
+		$(this).hover(function(){
+			var $text = $(this).find('img').attr('alt');
+			var $span ='<span>' + $text + '</span>';
+			$(this).append($span).css('position','relative');
+		},function(){
+			$(this).css('position','');
+			$(this).find('span').remove();
+		})
+	});
+});
+function checkSearchForm()
+{
+    if(document.getElementById('keyword').value)
+    {
+        return true;
+    }
+    else
+    {
+        alert("{$lang.no_keywords}");
+        return false;
+    }
+}
+-->
+{/literal}
+</script>
+<div class="wrap cl tophead_wrap">
+	<div class="sitewith">
+		<div class="fl" id="ECS_MEMBERZONE">{insert name='member_info'}</div>
+		
+		<div class="toptel fr">服务热线：<span class="toptelstyle">0379 - 6677 7766</span></div>
+	</div>
+</div>
+<div class="wrap topmain_wrap">
+	<div class="sitewith">
+		<div class="fl"><a href="index.php"><img src="images/logo1.jpg" height="70px;" /></a></div>
+		
+
+         <div class="hd_head_searchss fl">
+                <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="{$search_keywords|escape}" >
+                  <!--搜索提示 begin-->
+                  <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
+                  </input>
+                </form>
+          </div>
+      
+		
+		<div class="fr"><img src="images/logo3.jpg" height="70px;" /></div>
+	</div>
+</div>
+<div class="wrap nav_wrap">
+	<div class="sitewith top-navicat">
+		<ul class="nav-menu-list">
+			<li><a href="../index.php">{$lang.home}</a></li>
+			<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+			<li><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="nav-a-curt"{/if} >{$nav.name}</a></li>
+			<!-- {/foreach} -->
+		</ul>
+		<div class="shopcart fr" id="ECS_CARTINFO">{insert name='cart_info'}</div>
+	</div>
+</div>

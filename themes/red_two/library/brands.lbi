@@ -1,0 +1,10 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $brand_list} -->
+			<div class="bxdl-list">
+				<!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+				<!-- {if $brand.brand_logo} -->
+				<a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html}"></a> 
+				<!-- {/if} -->
+				<!-- {/foreach} -->
+			</div>
+<!-- {/if} -->

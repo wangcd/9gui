@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<div class="cl pt8"></div>
+	<div class="wrap cl">
+		<div class="sitewith footer">
+			<div class="fullbox box-border">
+				<div class="box-tit catebox-tit">
+					<h2>{$goods_cat.name|escape:html}</h2>
+					<a class="tit_more" href="{$goods_cat.url}">更多</a>
+				</div>
+				<div class="box-dl">
+					<div class="catebox-l">
+						<div class="fl JQ_cat_ad"><div style="width:220px;height:287px;"></div></div>
+					</div>
+					<ul class="goodslist catebox-r">
+						<!--{foreach from=$cat_goods item=goods}-->
+						<li>
+							<div class="gl-img">
+								<a href="{$goods.url}">
+									<!-- {if $goods.discount_rate gt 0} -->
+									<b class="gl-water">{$goods.discount_rate}折</b>
+									<!--{/if}-->
+									<img style="border:none;" alt="{$goods.name|escape:html}" src="{$goods.thumb}">
+								</a>
+								<!--{if !empty($goods.brief)}-->
+								<div class="gl-abst-disc"><p>{$goods.brief}</p></div>
+								<!--{/if}-->
+							</div>
+							<div class="gl-name-p">
+								<div class="gl-name"><a href="{$goods.url}">{$goods.name|escape:html}</a></div>
+								<div class="gl-price">
+									<span class="gl-p-l"><b>
+									<!-- {if $goods.promote_price neq ""} -->
+									{$goods.promote_price}
+									<!-- {else}-->
+									{$goods.shop_price}
+									<!--{/if}-->
+									</b></span>
+									<span class="gl-p-r"><del>{$goods.market_price}</del></span>
+								</div>
+							</div>
+						</li>
+						<!--{/foreach}-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
