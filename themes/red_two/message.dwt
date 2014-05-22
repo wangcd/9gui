@@ -18,6 +18,7 @@
 {insert_scripts files='common.js'}
 <style type="text/css">
 p a{color:#006acd; text-decoration:underline;}
+
 </style>
 </head>
 <body>

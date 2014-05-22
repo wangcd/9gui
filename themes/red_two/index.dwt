@@ -115,7 +115,7 @@ $(function(){
 <div class="wrap">
 	<div class="sitewith fullbox box-border">
 		<div class="box-tit brand-tit">
-			<h2>品牌馆</h2>
+			<h2>品牌专区</h2>
 		</div>
 		<div class="brand-box-dl" id="brandWall">
 		<!-- TemplateBeginEditable name="品牌馆" -->

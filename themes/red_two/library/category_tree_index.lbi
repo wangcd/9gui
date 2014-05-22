@@ -5,7 +5,7 @@
 <ul class="catetree-list">
 <!--{foreach from=$categories item=cat name=no}-->
 	<li>
-		<h3><span>&gt;</span><a href="{$cat.url}" target="_blank">{$cat.name|escape:html}</a></h3>
+		<div><b><a href="{$cat.url}" target="_blank">{$cat.name|escape:html}</a></b></div>
 		<p>
         <!--{foreach from=$cat.cat_id item=rs_child name=rs_childs}-->
         	<a href="{$rs_child.url}" target="_blank">{$rs_child.name|escape:html}</a>
@@ -18,6 +18,13 @@
 			<!-- 竖导航end -->
 <script type="text/javascript">
 	$(function($) {
+		$(".catetree-list li:odd").css({background:"#ededed",color:"#888"});
+		$(".catetree-list li:even").css({background:"#fff",color:"#888"});
+		$(".catetree-list li:eq(0)").css("border-left","4px #f06680 solid");
+		$(".catetree-list li:eq(1)").css("border-left","4px #db9b3f solid");
+		$(".catetree-list li:eq(2)").css("border-left","4px #6aa515 solid");
+		$(".catetree-list li:eq(3)").css("border-left","4px #3ab3e0 solid");
+		$(".catetree-list li:eq(4)").css("border-left","4px #997ad3 solid");
 		$(".catetree-list li").hover(
 			function(){
 				$(this).addClass("current");
