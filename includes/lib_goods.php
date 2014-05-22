@@ -224,6 +224,7 @@ function get_recommend_goods($type = '', $cats = '')
                     }
                     if ($data['is_hot'] == 1)
                     {
+
                         $goods_data['hot'][] = array('goods_id' => $data['goods_id'], 'sort_order' => $data['sort_order']);
                     }
                     if ($data['brand_name'] != '')
@@ -381,7 +382,9 @@ function get_promote_goods($cats = '')
         {
             $goods[$idx]['promote_price'] = '';
         }
-
+		
+        $goods[$idx]['end_date'] = $row['promote_end_date'];
+        $goods[$idx]['end_date_str'] = date('M j,Y H:i:s',$row['promote_end_date']);
         $goods[$idx]['id']           = $row['goods_id'];
         $goods[$idx]['name']         = $row['goods_name'];
         $goods[$idx]['brief']        = $row['goods_brief'];
@@ -779,7 +782,6 @@ function assign_cat_goods($cat_id, $num = 0, $from = 'web', $order_rule = '')
         }
         else
         {
-        	$promote_price = 0;
             $goods[$idx]['promote_price'] = '';
         }
 		/*******计算折扣率************************************************************************/

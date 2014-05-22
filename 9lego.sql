@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50524
 File Encoding         : 65001
 
-Date: 2014-05-22 14:00:53
+Date: 2014-05-22 17:36:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -76,7 +76,7 @@ INSERT INTO `lego_ad` VALUES ('7', '3', '0', '首页全宽行广告', '', '14005
 INSERT INTO `lego_ad` VALUES ('8', '4', '0', '首页商品分类内广告1', '', '1395165263409182523.jpg', '1395129600', '1650182400', '', '', '', '0', '1');
 INSERT INTO `lego_ad` VALUES ('9', '4', '0', '首页商品分类内广告2', '', '1395165318462292254.jpg', '1395129600', '1650182400', '', '', '', '1', '1');
 INSERT INTO `lego_ad` VALUES ('10', '4', '0', '首页商品分类内广告3', '', '1395621905213961042.jpg', '1395561600', '1650614400', '', '', '', '3', '1');
-INSERT INTO `lego_ad` VALUES ('11', '6', '0', '首页商品分类列表左侧', '', '1400657319062474672.jpg', '1400572800', '1403164800', '', '', '', '0', '1');
+INSERT INTO `lego_ad` VALUES ('11', '6', '0', '首页商品分类列表左侧', '', '1400718075952385292.jpg', '1400572800', '1403164800', '', '', '', '0', '1');
 
 -- ----------------------------
 -- Table structure for `lego_ad_custom`
@@ -119,7 +119,7 @@ INSERT INTO `lego_ad_position` VALUES ('2', '首页品牌馆广告位', '220', '
 INSERT INTO `lego_ad_position` VALUES ('3', '首页全宽行广告位', '1200', '100', '', '{foreach from=$ads item=ad}\r\n<div class=\"wrap cl\">\r\n	<div class=\"sitewith\">\r\n		{$ad}\r\n	</div>\r\n</div>\r\n{/foreach}');
 INSERT INTO `lego_ad_position` VALUES ('4', '首页商品分类内广告位', '220', '287', '', '{foreach from=$ads item=ad}\r\n<div class=\"JQ_cat_ad_data\">{$ad}</div>\r\n{/foreach}');
 INSERT INTO `lego_ad_position` VALUES ('5', '文章列表上', '1200', '100', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
-INSERT INTO `lego_ad_position` VALUES ('6', '首页商品分类列表左侧', '208', '300', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
+INSERT INTO `lego_ad_position` VALUES ('6', '首页商品分类列表左侧', '208', '208', '', '<table cellpadding=\"0\" cellspacing=\"0\">\r\n{foreach from=$ads item=ad}\r\n<tr><td>{$ad}</td></tr>\r\n{/foreach}\r\n</table>');
 
 -- ----------------------------
 -- Table structure for `lego_admin_action`
@@ -260,7 +260,7 @@ CREATE TABLE `lego_admin_log` (
   PRIMARY KEY (`log_id`),
   KEY `log_time` (`log_time`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=252 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=256 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lego_admin_log
@@ -516,6 +516,10 @@ INSERT INTO `lego_admin_log` VALUES ('248', '1400695706', '1', '添加友情链�
 INSERT INTO `lego_admin_log` VALUES ('249', '1400697079', '1', '添加商品分类: 其他', '127.0.0.1');
 INSERT INTO `lego_admin_log` VALUES ('250', '1400697095', '1', '添加商品分类: 酒类杂志', '127.0.0.1');
 INSERT INTO `lego_admin_log` VALUES ('251', '1400697113', '1', '添加商品分类: 酒类书籍', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('252', '1400710836', '1', '编辑广告位置: 208', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('253', '1400710837', '1', '编辑广告位置: 300', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('254', '1400710844', '1', '编辑广告位置: 208', '127.0.0.1');
+INSERT INTO `lego_admin_log` VALUES ('255', '1400718075', '1', '编辑广告: 首页商品分类列表左侧', '127.0.0.1');
 
 -- ----------------------------
 -- Table structure for `lego_admin_message`
@@ -568,7 +572,7 @@ CREATE TABLE `lego_admin_user` (
 -- ----------------------------
 -- Records of lego_admin_user
 -- ----------------------------
-INSERT INTO `lego_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1400702055', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
+INSERT INTO `lego_admin_user` VALUES ('1', 'admin', 'admin@admin.com', '304f1497ec2037a1c8955a95a0f58539', '39', '1358236387', '1400718043', '127.0.0.1', 'all', '商品列表|goods.php?act=list,订单列表|order.php?act=list,用户评论|comment_manage.php?act=list,会员列表|users.php?act=list,商店设置|shop_config.php?act=list_edit', '', '0', '0', null, null);
 
 -- ----------------------------
 -- Table structure for `lego_adsense`
@@ -5584,6 +5588,8 @@ CREATE TABLE `lego_sessions` (
 -- ----------------------------
 -- Records of lego_sessions
 -- ----------------------------
+INSERT INTO `lego_sessions` VALUES ('79f8e1c7e87701a396f087c1a7a9bac5', '1400751334', '0', '1', '127.0.0.1', '0', '0', '0.00', '0', 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1400722534;s:12:\"suppliers_id\";s:1:\"0\";}');
+INSERT INTO `lego_sessions` VALUES ('3ccba522c7e3bdbba7e8e1f3e4444b6c', '1400750861', '0', '0', '127.0.0.1', '0', '0', '1.00', '0', 'a:5:{s:7:\"from_ad\";i:0;s:7:\"referer\";s:6:\"本站\";s:10:\"login_fail\";i:0;s:12:\"captcha_word\";s:16:\"NzY1ODk3NzRlZA==\";s:14:\"display_search\";s:4:\"grid\";}');
 
 -- ----------------------------
 -- Table structure for `lego_sessions_data`
@@ -6006,6 +6012,10 @@ INSERT INTO `lego_stats` VALUES ('1400698844', '127.0.0.1', '40', 'FireFox 29.0'
 INSERT INTO `lego_stats` VALUES ('1400699175', '127.0.0.1', '42', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/99gui/', '/99gui/search.php');
 INSERT INTO `lego_stats` VALUES ('1400700171', '127.0.0.1', '48', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/9gui/index.php');
 INSERT INTO `lego_stats` VALUES ('1400701309', '127.0.0.1', '49', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/9gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400709777', '127.0.0.1', '52', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/', '/9gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400712448', '127.0.0.1', '44', 'FireFox 29.0', 'Windows NT', 'zh-cn,zh', 'LAN', 'http://localhost', '/', '/9gui/index.php');
+INSERT INTO `lego_stats` VALUES ('1400718491', '127.0.0.1', '53', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/9gui/', '/9gui/message.php');
+INSERT INTO `lego_stats` VALUES ('1400718705', '127.0.0.1', '54', 'Safari 537.36', 'Windows NT', 'zh-CN,zh', 'LAN', 'http://localhost', '/9gui/', '/9gui/message.php');
 
 -- ----------------------------
 -- Table structure for `lego_suppliers`
