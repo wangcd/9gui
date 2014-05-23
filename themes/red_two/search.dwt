@@ -281,12 +281,13 @@ function countDown(time, elemId){
 	var end_time = new Date(time).getTime();//月份是实际月份-1
 	//current_time = new Date().getTime(),
 	sys_second = (end_time-new Date().getTime())/1000;
-	var timer = setInterval(
+	alert(end_time);
+	var timer = setInterval(//按照指定的周期（以毫秒计）来调用函数或计算表达式。
 		function(){
 			var elemText = "剩余";
 			if (sys_second > 0) {
 				sys_second -= 1;
-				var day = Math.floor((sys_second / 3600) / 24);
+				var day = Math.floor((sys_second / 3600) / 24);//返回小于等于数字参数的最大整数，对数字进行下舍入
 				var hour = Math.floor((sys_second / 3600) % 24);
 				var minute = Math.floor((sys_second / 60) % 60);
 				var second = Math.floor(sys_second % 60);

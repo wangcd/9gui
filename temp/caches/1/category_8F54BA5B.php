@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1400809723;s:8:"maketime";i:1400806123;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1400838550;s:8:"maketime";i:1400834950;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
@@ -518,8 +518,7 @@ var compare_no_goods = "您没有选定任何需要比较的商品或者比较�
 var btn_buy = "购买";
 var is_cancel = "取消";
 var select_spe = "请选择商品属性";
-</script>
-<form name="selectPageForm" action="/9gui/category.php" method="get">
+</script><form name="selectPageForm" action="/9gui/category.php" method="get">
  <div id="pager" class="pagebar">
   <span class="f_l " style="margin-right:10px;">总计 <b>6</b>  个记录</span>
       

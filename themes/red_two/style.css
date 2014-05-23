@@ -31,7 +31,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, 
 .fr {float: right;}
 .wrap {width: 100%;}
 .pt8 {padding-top: 8px;}
-.mt8 {margin-top: 8px}
+/*.mt8 {margin-top: 8px}*/
 .sitewith {width: 1200px; margin: 0 auto;}
 
 /*
@@ -135,7 +135,7 @@ color: #E60012; font-weight:bold }
   .blank{height:15px; line-height:15px; clear:both; visibility:hidden;}
   .blank5{height:5px; line-height:5px;/* _margin:-3px 0;e c m o b a n*/ clear:both; visibility:hidden;}
   /*布局*/
-  .AreaL{width:216px; float:left; margin-top:10px;}
+  .AreaL{width:216px; float:left; margin-top:10px; background:#fff;}
   
   .index_page .AreaL{ position:relative;  margin-top:-35px; z-index:99999}
   
@@ -2064,7 +2064,7 @@ form{
 .noticbox {height: 156px; padding: 5px 10px; line-height: 20px; width: 188px; letter-spacing: 2px; overflow: hidden; background: #fff;}
 .idx-newslist {height: 156px;}
 	.idx-newslist li {height: 26px;line-height: 26px;width: 188px; overflow: hidden;}
-#orderQueue_div {height:360px;overflow: hidden;color: #89DD61;}
+#orderQueue_div {height:340px;overflow: hidden;color: #89DD61; padding-bottom:30px;}
 	#orderQueue_div li {height: 25px;line-height: 25px;width: 188px; overflow: hidden;}
 .left-box {width: 208px; background: #fff;}
 	.left-box-tit, .box-tit {height: 30px; line-height: 30px; background: #906d1c 2px solid; padding: 0 8px; border-bottom:#906d1c 2px solid}
@@ -2169,10 +2169,7 @@ form{
 
 
 /*首页热销最新切换效果*/
-.qh_box,.qh_con{
-	width:980px;
-	margin-top:5px;
-}
+
 .qh_title{
 	float:left;
 	width:243px;
@@ -2197,14 +2194,21 @@ form{
 	color:#88265d;
 }
 
+/*******************/
+.qh_box,.fl_box{
+	width:980px;
+	margin-top:5px;
+}
+.qh_con,.fl_con{
+	width:980px;
+	float:left;
+}
+/*******************/
 /*首页商品分类切换效果*/
 .showss{
 	display:none;
 }
-.fl_box,.fl_con{
-	width:980px;
-	margin-top:5px;
-}
+
 .fl_title{
 	float:left;
 	width:243px;
