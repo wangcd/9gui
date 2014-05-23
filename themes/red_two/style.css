@@ -1,4 +1,4 @@
-/*
+﻿/*
 Template Name: RockStore 红色2号宽屏
 Template URI: 
 Description: red_two
@@ -349,7 +349,7 @@ font-size: 14px; font-weight:bold}
 	text-indent:20px;
 	font-size:14px;
 }
-#category_tree dl{float:left; width:100%; position:relative; }
+#category_tree dl{float:left; width:100%; position:relative; background:#fff;}
    #category_tree .dt{font-size:12px;position:relative; border-bottom:1px dotted #E4E4E4;}
    #category_tree .dt .a{background:url(images/biao5.gif) no-repeat 10px center #FFF; color:#0d0d0d; font-family:"微软雅黑"; padding-left:20px; font-size:12px; font-weight:bold;  text-decoration:none; display:block; height:43px; line-height:43px; position:relative;   }
    
@@ -560,7 +560,7 @@ font-family:"microsoft yahei", arial; font-size:18px; text-align:left}
    
   .textInfo ul strong{ font-weight:normal}
    /*文字信息*/
-   #goodsInfo .textInfo{ width:570px; float:right; padding: 0px;  }
+   #goodsInfo .textInfo{ width:570px; float:right; padding: 0px; text-align:left; }
    #goodsInfo .textInfo h1{ padding-bottom:10px;border-bottom:1px solid #ccc;}
    #goodsInfo .textInfo p{font-size:14px; font-weight:bold; padding:0 5px 5px 8px;}
    #goodsInfo .textInfo ul{ padding:6px 0 }
@@ -2318,11 +2318,7 @@ a{
 }
 .search_title span{
 	font-size:18px;
-<<<<<<< HEAD
 	color:#88265d;
-=======
-	color:#F00;
->>>>>>> 9eb7a17871d4bd196a21bc0ee95c1862ed32b612
 }
 .search_title a{
 	background:url(images/chongx.png) no-repeat;
