@@ -76,7 +76,7 @@ visibility:hidden;
   .B_input{border:1px solid #ccc;}
   .inputBg{border:1px solid #b3b3b3;   height:23px; line-height:23px;}
   /*字体颜色ecmoban.com*/
-  .f1{color:#b22825; font-weight:bold}
+  .f1{color:#812a5b; font-weight:bold}
   .f2{color:#ff6f3d; font-weight:bold; margin-right:15px;}
   .f3{color:#9e9e9e;}
   .f4{color:#b22825;}
@@ -86,9 +86,9 @@ visibility:hidden;
   .market{ font-size:12px; text-decoration:line-through; color:#999}
   .shop{font-family: "微软雅黑",'Arial';
 font-size: 28px;
-color: #E60012; font-weight:bold }
+color: #812A5B; font-weight:bold }
   .market_s{text-decoration:line-through;}
-  .shop_s{color:#E60012;  font-weight:bold}
+  .shop_s{color:#812a5b;  font-weight:bold}
   /*按钮部分*/
   .bnt_blue{
   background:url(images/bg.gif) no-repeat 0px 0px; width:52px; height:21px;
@@ -467,7 +467,7 @@ font-size: 14px; font-weight:bold}
    
    
    
-   .itemBest_box .f1{ color:#1e51a4; font-weight:bold}
+   .itemBest_box .f1{ color:#812a5b; font-weight:bold}
    .itemBest_box .f1 a{ color:#1e51a4;}
    
 
@@ -532,7 +532,7 @@ font-size: 14px; font-weight:bold}
    /*浏览历史，收藏*/
    .history{ border-bottom:none;}
    .history h2{height:32px; line-height:32px; width:148px;  text-align:center; font-size:12px;
-   float:left; color:#fff; background:#E60012; margin-right:5px;  
+   float:left; color:#fff; background:#812a5b; margin-right:5px;  
   
    }
    .history .h2bg{   border:1px solid #ddd ; border-bottom:none; color:#666;height:31px; line-height:31px; width:146px; background:none ;  

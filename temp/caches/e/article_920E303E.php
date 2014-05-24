@@ -1,11 +1,11 @@
-<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:43:"F:/wamp/www/9gui/themes/red_two/article.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:51:"F:/wamp/www/9gui/themes/red_two/library/ur_here.lbi";i:3;s:53:"F:/wamp/www/9gui/themes/red_two/library/left_help.lbi";i:4;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:5;s:52:"F:/wamp/www/9gui/themes/red_two/library/comments.lbi";i:6;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1400838546;s:8:"maketime";i:1400834946;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:43:"F:/wamp/www/9gui/themes/red_two/article.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:51:"F:/wamp/www/9gui/themes/red_two/library/ur_here.lbi";i:3;s:53:"F:/wamp/www/9gui/themes/red_two/library/left_help.lbi";i:4;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:5;s:52:"F:/wamp/www/9gui/themes/red_two/library/comments.lbi";i:6;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1400916201;s:8:"maketime";i:1400912601;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Keywords" content="" />
 <meta name="Description" content="" />
-<title>红酒知识rete_红酒知识_玖櫃</title>
+<title>联盟商家_招商合作_网店帮助分类_系统分类_玖櫃</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/red_two/style.css" rel="stylesheet" type="text/css" />
@@ -117,7 +117,7 @@ function checkSearchForm()
   <div class="block box">
 <div class="blank"></div>
  <div id="ur_here">
-当前位置: <a href=".">首页</a> <code>&gt;</code> <a href="article_cat-12.html">红酒知识</a> <code>&gt;</code> 红酒知识rete 
+当前位置: <a href=".">首页</a> <code>&gt;</code> <a href="article_cat-1.html">系统分类</a> <code>&gt;</code> <a href="article_cat-3.html">网店帮助分类</a> <code>&gt;</code> <a href="article_cat-9.html">招商合作</a> <code>&gt;</code> 联盟商家 
 </div>
 </div>
 <div class="blank"></div><div class="block clearfix">
@@ -188,18 +188,20 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
      <div class="box_1">
       <div style="  background-color:#fff; padding:20px 15px;">
          <div class="tc" style="padding:8px;">
-         <font class="f5 f6" style="font-size:18px; ">红酒知识rete</font><br /><font class="f3">玖櫃 / 2014-05-18</font>
+         <font class="f5 f6" style="font-size:18px; ">联盟商家</font><br /><font class="f3">玖櫃 / 2014-04-03</font>
          </div>
-                           <div style="padding:8px; margin-top:15px; text-align:left; border-top:1px solid #ccc;">
+                   <p>&nbsp;联盟商家</p>
+<p>联盟商家</p>
+<p>联盟商家</p>
+<p>联盟商家</p>                           <div style="padding:8px; margin-top:15px; text-align:left; border-top:1px solid #ccc;">
          
                     
-                      上一篇:<a href="article-46.html" class="f6">红酒知识额外确认</a>
                    </div>
       </div>
     </div>
   </div>
   <div class="blank"></div>
-  <div id="ECS_COMMENT"> 554fcae493e564ee0dc75bdf2ebf94cacomments|a:3:{s:4:"name";s:8:"comments";s:4:"type";s:1:"1";s:2:"id";i:47;}554fcae493e564ee0dc75bdf2ebf94ca</div>
+  <div id="ECS_COMMENT"> 554fcae493e564ee0dc75bdf2ebf94cacomments|a:3:{s:4:"name";s:8:"comments";s:4:"type";s:1:"1";s:2:"id";i:16;}554fcae493e564ee0dc75bdf2ebf94ca</div>
   </div>
   
 </div>

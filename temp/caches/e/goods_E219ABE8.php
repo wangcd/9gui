@@ -1,15 +1,42 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1400838550;s:8:"maketime";i:1400834950;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:11:{i:0;s:41:"F:/wamp/www/9gui/themes/red_two/goods.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:57:"F:/wamp/www/9gui/themes/red_two/library/goods_gallery.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_tags.lbi";i:7;s:57:"F:/wamp/www/9gui/themes/red_two/library/goods_related.lbi";i:8;s:56:"F:/wamp/www/9gui/themes/red_two/library/bought_goods.lbi";i:9;s:52:"F:/wamp/www/9gui/themes/red_two/library/comments.lbi";i:10;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1400915931;s:8:"maketime";i:1400912331;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Keywords" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta name="Keywords" content="湖北 其他" />
 <meta name="Description" content="" />
-<title>价格_玖櫃</title>
+<title>42°白云边十二年陈酿 500ml_国家_玖櫃</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="themes/red_two/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script><script type="text/javascript" src="js/jquery.json-2.4.min.js"></script><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/global.js"></script><script type="text/javascript" src="js/compare.js"></script></head>
+<script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="themes/red_two/js/action.js"></script>
+<script type="text/javascript" src="themes/red_two/js/mzp-packed-me.js"></script>
+<script type="text/javascript">
+function $id(element) {
+  return document.getElementById(element);
+}
+//切屏--是按钮，_v是内容平台，_h是内容库
+function reg(str){
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+  for(var i=0;i<bt.length;i++){
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+    bt[i].onclick=function(){
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++){
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+</script>
+</head>
 <body>
 <script type="text/javascript">
 var process_request = "正在处理您的请求...";
@@ -36,7 +63,7 @@ var process_request = "正在处理您的请求...";
             }
      
 </script>
-<script type="text/javascript" src="js/transport.js"></script><script type="text/javascript" src="js/utils.js"></script><script type="text/javascript">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script><script type="text/javascript" src="js/jquery.json-2.4.min.js"></script><script type="text/javascript" src="js/transport.js"></script><script type="text/javascript" src="js/utils.js"></script><script type="text/javascript">
 <!--
 $(function($) {
 	$("#search_input_btn").on("click",function(){
@@ -104,7 +131,7 @@ function checkSearchForm()
 	<div class="sitewith top-navicat">
 		<ul class="nav-menu-list">
 			<li><a href="index.php">首页</a></li>
-						<li><a href="category-2-b0.html"   class="nav-a-curt" >价格</a></li>
+						<li><a href="category-2-b0.html"   >价格</a></li>
 						<li><a href="search-promotion.html"   >限时抢购</a></li>
 						<li><a href="search-best.html"   >玖櫃推荐</a></li>
 						<li><a href="exchange.php"   >积分商城</a></li>
@@ -285,7 +312,9 @@ function tab(id)
 			obj_img.item(id).src = "themes/red_two/images/btn_fold.gif"
 		}
 }
-</script><div class="box" id='history_div'> <div class="box_1">
+</script>
+    
+    <div class="box" id='history_div'> <div class="box_1">
  <h3><span>浏览历史</span></h3>
  
   <div class="boxCenterList clearfix" id='history_list'>
@@ -310,229 +339,256 @@ function clear_history_Response(res)
 {
 document.getElementById('history_list').innerHTML = '您已清空最近浏览过的商品';
 }
-</script>
-    
-  </div>
+</script>  </div>
   
   
   <div class="AreaR">
   <div class="box">
 <div class="blank"></div>
  <div id="ur_here">
-当前位置: <a href=".">首页</a> <code>&gt;</code> <a href="category-2-b0.html">价格</a> 
+当前位置: <a href=".">首页</a> <code>&gt;</code> <a href="category-1-b0.html">国家</a> <code>&gt;</code> 42°白云边十二年陈酿 500ml 
 </div>
 </div>
-<div class="blank"></div>	 
-	        
-  <div class="search_list">
-	<div class="search_title">
-    	<span>价格</span>
-    	<a href="#">　　重新筛选</a>
-    </div>
-    <div class="search_con">
-    	<div class="search_con_list">
-        	<div class="fenl">价格 :</div>
-            <div class="fenl_list">
-            	<div><a href=""><span class="fenl_list_fir">全部</span></a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.html">全部</a></div>
-                                <div><a href="category-2-b0-min80-max100-attr0.html">80&nbsp;-&nbsp;100</a></div>
-                                <div><a href="category-2-b0-min140-max160-attr0.html">140&nbsp;-&nbsp;160</a></div>
-                                <div><a href="category-2-b0-min160-max180-attr0.html">160&nbsp;-&nbsp;180</a></div>
-                                <div><a href="category-2-b0-min180-max200-attr0.html">180&nbsp;-&nbsp;200</a></div>
-                            </div>
-        </div>
-                <div class="search_con_list">
-        	<div class="fenl">干型 :</div>
-            <div class="fenl_list">
-            	<div><a href="" class=""><span class="fenl_list_fir">全部</span></a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.0.0.html">全部</a></div>
-                                <div><a href="category-2-b0-min0-max0-attr3.0.0.html">干红</a></div>
-                            </div>        
-        </div>
-                <div class="search_con_list">
-        	<div class="fenl">颜色 :</div>
-            <div class="fenl_list">
-            	<div><a href="" class=""><span class="fenl_list_fir">全部</span></a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.0.0.html">全部</a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.2.0.html">红色</a></div>
-                            </div>        
-        </div>
-                <div class="search_con_list">
-        	<div class="fenl">产地 :</div>
-            <div class="fenl_list">
-            	<div><a href="" class=""><span class="fenl_list_fir">全部</span></a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.0.0.html">全部</a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.0.16.html">中国</a></div>
-                                <div><a href="category-2-b0-min0-max0-attr0.0.1.html">法国</a></div>
-                            </div>        
-        </div>
+<div class="blank"></div>   
+   <div id="goodsInfo" class="clearfix">
+    
+     
+     <div class="imgInfo">
+     <a href="images/201403/goods_img/11_P_1395448569966.jpg" id="zoom1" class="MagicZoom MagicThumb" title="42°白云边十二年陈酿 500ml">
+      <img src="images/201403/goods_img/11_G_1395448568534.jpg" alt="42°白云边十二年陈酿 500ml" width="360px;" height="360px"/>
+     </a>
+     <div class="blank5"></div>
+    <div style="text-align:center; position:relative; width:100%;">
+               <a href="goods-20.html"><img style="position: absolute; left:0;" alt="prev" src="themes/red_two/images/up.gif" /></a>
+            <a href="javascript:;" onclick="window.open('gallery.php?id=11'); return false;"><img alt="zoom" src="themes/red_two/images/zoom.gif" /></a>
+            <a href="goods-10.html"><img style="position: absolute;right:0;"  alt="next" src="themes/red_two/images/down.gif" /></a>
             </div>
-</div>      
+      
+ 
+         <div class="blank"></div>
+           
+      <div class="picture" id="imglist">
+		
+                          
+                         
+           <a  href="images/201403/goods_img/11_P_1395448569966.jpg"
+    	rel="zoom1" 
+        rev="images/201403/goods_img/11_P_1395448569966.jpg"
+        title="">
+        <img src="images/201403/thumb_img/11_thumb_P_1395448569809.jpg" alt="42°白云边十二年陈酿 500ml" class="onbg" /></a>
+                                  
+</div>
+ 
+<script type="text/javascript">
+	mypicBg();
+</script>     
+         
+     </div>
+     
+     <div class="textInfo">
+     <form action="javascript:addToCart(11)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+	  <h1 class="clearfix" >
+      42°白云边十二年陈酿 500ml      </h1> 
+ 
         
-		<div class="blank"></div>
-	  	 
+	   
+	  
+	  <ul class="ul2 clearfix">
+        <li class="clearfix" style="width:100%">
+       <dd>
+ 
+       
+       <strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">¥99.00</font> 
+   
+	   
+	          <font class="market">¥178.00</font> 
+              </dd>
+       </li>
+      
+      
+      
+      
+             <li class="clearfix">
+       <dd>
+       <strong>商品货号：</strong>ble000011      
+       </dd>
+       </li> 
+                                
+              <li class="clearfix">
+       <dd>
+       
+       <strong>商品点击数：</strong>9       </dd>
+      </li>
+	  </ul>
+	  
+	  
+	  <ul>
+     
+        
+      
+        
+  
+  <li class="clearfix">
+       <dd >
+  
+              注册用户：<font class="f1" id="ECS_RANKPRICE_1" style=" padding-right:10px;">¥99.00</font> 
+              
+        <a href="javascript:collect(11)">收藏</a> |  
+           </dd>
+      </li>
+  
+               
+      
+       
+        <li class="clearfix">
+       <dd>
+       <strong>购买此商品可使用：</strong><font class="f4">0 积分</font>
+       </dd>
+      </li>
+                            </ul>
+         <ul class="bnt_ul">
+     
+      
+            
+      
+           <li class="clearfix">
+       <dd>
+       <strong>购买数量：</strong>
+        <input name="number" type="text" id="number" value="1" size="4" onblur="changePrice()" style="border:1px solid #ccc; "/> <strong>商品总价：</strong><font id="ECS_GOODS_AMOUNT" class="f1"></font>
+       </dd>
+       </li>
+      
+      <li class="padd">
+      <a href="javascript:addToCart(11)"><img src="themes/red_two/images/goumai2.gif" /></a>
+     
+      </li>
+     
+      </ul>
+      </form>
+     </div>
+   </div>
+   <div class="blank"></div>
+   
+   
+     <div class="box">
+ 
+      <div style="padding:0 0px;">
+        <div id="com_b" class="history clearfix">
+        <h2>商品描述</h2>
+        <h2 class="h2bg">商品属性</h2>
+         <h2 class="h2bg">商品标签</h2>
+           <h2 class="h2bg">相关商品</h2>
+                </div>
+      </div>    <div class="box_1">
+      <div id="com_v" class="  " style="padding:6px;"></div>
+      <div id="com_h">
+       <blockquote>
+               </blockquote> 
+       
+       <blockquote>
+      <table class="table" width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#dddddd">
+                <tr>
+          <th colspan="2" bgcolor="#FFFFFF">商品属性</th>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF" align="left" width="30%" class="f1">[产地]</td>
+          <td bgcolor="#FFFFFF" align="left" width="70%">湖北</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF" align="left" width="30%" class="f1">[香型]</td>
+          <td bgcolor="#FFFFFF" align="left" width="70%">其他</td>
+        </tr>
+                <tr>
+          <td bgcolor="#FFFFFF" align="left" width="30%" class="f1">[度数]</td>
+          <td bgcolor="#FFFFFF" align="left" width="70%">42</td>
+        </tr>
+                      </table>
+     </blockquote>
+     <blockquote>
    
 <div class="box">
- <div class="box_1">
-  <h3>
-  <span>商品列表</span>
-  <form method="GET" class="sort" name="listform">
- 
-  <a href="category.php?category=2&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=goods_id&order=ASC#goods_list"><img src="themes/red_two/images/goods_id_DESC.gif" alt="按上架时间排序"></a>
-  <a href="category.php?category=2&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=shop_price&order=ASC#goods_list"><img src="themes/red_two/images/shop_price_default.gif" alt="按价格排序"></a>
-  <a href="category.php?category=2&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=last_update&order=DESC#goods_list"><img src="themes/red_two/images/last_update_default.gif" alt="按更新时间排序"></a>
-  <input type="hidden" name="category" value="2" />
-  <input type="hidden" name="display" value="grid" id="display" />
-  <input type="hidden" name="brand" value="0" />
-  <input type="hidden" name="price_min" value="0" />
-  <input type="hidden" name="price_max" value="0" />
-  <input type="hidden" name="filter_attr" value="0" />
-  <input type="hidden" name="page" value="1" />
-  <input type="hidden" name="sort" value="goods_id" />
-  <input type="hidden" name="order" value="DESC" />
-    </form>
-  </h3>
-				<div class="clearfix goodsBox" style="border:none; padding:18px 0 10px 0px;">
-					<ul class="goodslist-cate">
-																		<li>
-							<div class="gl-img">
-								<a href="goods-6.html">
-																		<b class="gl-water">7.4折</b>
-																		<img style="border:none;" src="images/201403/thumb_img/6_thumb_G_1395444655866.jpg" alt="中国张裕馆藏干红葡萄酒 750ml">
-								</a>
-															</div>
-							<div class="gl-name-p">
-								<div class="gl-name"><a href="goods-6.html" title="中国张裕馆藏干红葡萄酒 750ml">中国张裕馆藏干红葡萄酒 750ml</a></div>
-								<div class="gl-price">
-									<span class="gl-p-l"><b>
-																		¥88.00																		</b></span>
-									<span class="gl-p-r"><del>¥118.00</del></span>
-								</div>
-							</div>
-						</li>
-																								<li>
-							<div class="gl-img">
-								<a href="goods-5.html">
-																		<b class="gl-water">2.6折</b>
-																		<img style="border:none;" src="images/201403/thumb_img/5_thumb_G_1395444503051.jpg" alt="法国拉菲庄园法莱利2011干红单支礼盒 750ml">
-								</a>
-															</div>
-							<div class="gl-name-p">
-								<div class="gl-name"><a href="goods-5.html" title="法国拉菲庄园法莱利2011干红单支礼盒 750ml">法国拉菲庄园法莱利2011干红单支礼盒 750ml</a></div>
-								<div class="gl-price">
-									<span class="gl-p-l"><b>
-																		¥148.00																		</b></span>
-									<span class="gl-p-r"><del>¥560.00</del></span>
-								</div>
-							</div>
-						</li>
-																								<li>
-							<div class="gl-img">
-								<a href="goods-4.html">
-																		<b class="gl-water">6.2折</b>
-																		<img style="border:none;" src="images/201403/thumb_img/4_thumb_G_1395440303705.jpg" alt="法国拉菲庄园法莱利金冠2010干红礼盒 750ml">
-								</a>
-															</div>
-							<div class="gl-name-p">
-								<div class="gl-name"><a href="goods-4.html" title="法国拉菲庄园法莱利金冠2010干红礼盒 750ml">法国拉菲庄园法莱利金冠2010干红礼盒 750ml</a></div>
-								<div class="gl-price">
-									<span class="gl-p-l"><b>
-																		¥433.00																		</b></span>
-									<span class="gl-p-r"><del>¥688.00</del></span>
-								</div>
-							</div>
-						</li>
-																								<li>
-							<div class="gl-img">
-								<a href="goods-3.html">
-																		<b class="gl-water">3.5折</b>
-																		<img style="border:none;" src="images/201403/thumb_img/3_thumb_G_1395440181586.jpg" alt="法国拉菲庄园法莱利干红葡萄酒 750ml">
-								</a>
-															</div>
-							<div class="gl-name-p">
-								<div class="gl-name"><a href="goods-3.html" title="法国拉菲庄园法莱利干红葡萄酒 750ml">法国拉菲庄园法莱利干红葡萄酒 750ml</a></div>
-								<div class="gl-price">
-									<span class="gl-p-l"><b>
-																		¥168.00																		</b></span>
-									<span class="gl-p-r"><del>¥480.00</del></span>
-								</div>
-							</div>
-						</li>
-																								<li>
-							<div class="gl-img">
-								<a href="goods-2.html">
-																		<b class="gl-water">1.8折</b>
-																		<img style="border:none;" src="images/201403/thumb_img/2_thumb_G_1395438523627.jpg" alt="法国拉菲庄园法莱利经典干红葡萄酒 750ml">
-								</a>
-																<div class="gl-abst-disc"><p>法国拉菲庄园法莱利经典干红葡萄酒，散发着黑莓的紫色和微微的胡椒香，酒体适中，入口有浓郁的果香夹带着优雅的丹宁。与各种卤汁料理，野味和辣菜、酱鸭、鹅肝、红烧肉搭配最佳。</p></div>
-															</div>
-							<div class="gl-name-p">
-								<div class="gl-name"><a href="goods-2.html" title="法国拉菲庄园法莱利经典干红葡萄酒 750ml">法国拉菲庄园法莱利经典干红葡萄酒 750ml</a></div>
-								<div class="gl-price">
-									<span class="gl-p-l"><b>
-																		¥99.00																		</b></span>
-									<span class="gl-p-r"><del>¥538.00</del></span>
-								</div>
-							</div>
-						</li>
-																								<li>
-							<div class="gl-img">
-								<a href="goods-1.html">
-																		<b class="gl-water">2.7折</b>
-																		<img style="border:none;" src="images/201403/thumb_img/1_thumb_G_1395430740653.jpg" alt="法国马蒂隆1907干红葡萄酒 750ml">
-								</a>
-															</div>
-							<div class="gl-name-p">
-								<div class="gl-name"><a href="goods-1.html" title="法国马蒂隆1907干红葡萄酒 750ml">法国马蒂隆1907干红葡萄酒 750ml</a></div>
-								<div class="gl-price">
-									<span class="gl-p-l"><b>
-																		¥88.00																		</b></span>
-									<span class="gl-p-r"><del>¥320.00</del></span>
-								</div>
-							</div>
-						</li>
-																	</ul>
-				</div>
- </div>
-</div>
-<div class="blank5"></div>
-<script type="Text/Javascript" language="JavaScript">
-<!--
-function selectPage(sel)
-{
-  sel.form.submit();
-}
-//-->
-</script>
-<script type="text/javascript">
-window.onload = function()
-{
-  Compare.init();
-  fixpng();
-}
-var button_compare = '';
-var exist = "您已经选择了%s";
-var count_limit = "最多只能选择4个商品进行对比";
-var goods_type_different = "\"%s\"和已选择商品类型不同无法进行对比";
-var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
-var btn_buy = "购买";
-var is_cancel = "取消";
-var select_spe = "请选择商品属性";
-</script><form name="selectPageForm" action="/9gui/category.php" method="get">
- <div id="pager" class="pagebar">
-  <span class="f_l " style="margin-right:10px;">总计 <b>6</b>  个记录</span>
-      
+     <div class="box_1">
+      <h3><span class="text">商品标签</span></h3>
+      <div class="boxCenterList clearfix ie6">
+       <form name="tagForm" action="javascript:;" onSubmit="return submitTag(this)" id="tagForm">
+        <p id="ECS_TAGS" style="margin-bottom:5px;">
+                  </p>
+        <p>
+          <input type="text" name="tag" id="tag" class="inputBg" size="35" />
+          <input type="submit" value="添 加" class="bnt_blue" style="border:none;" />
+          <input type="hidden" name="goods_id" value="11"  />
+        </p>
+                <script type="text/javascript">
+                //<![CDATA[
+                
+                /**
+                 * 用户添加标记的处理函数
+                 */
+                function submitTag(frm)
+                {
+                  try
+                  {
+                    var tag = frm.elements['tag'].value;
+                    var idx = frm.elements['goods_id'].value;
+                    if (tag.length > 0 && parseInt(idx) > 0)
+                    {
+                      Ajax.call('user.php?act=add_tag', "id=" + idx + "&tag=" + tag, submitTagResponse, "POST", "JSON");
+                    }
+                  }
+                  catch (e) {alert(e);}
+                  return false;
+                }
+                function submitTagResponse(result)
+                {
+                  var div = document.getElementById('ECS_TAGS');
+                  if (result.error > 0)
+                  {
+                    alert(result.message);
+                  }
+                  else
+                  {
+                    try
+                    {
+                      div.innerHTML = '';
+                      var tags = result.content;
+                      for (i = 0; i < tags.length; i++)
+                      {
+                        div.innerHTML += '<a href="search.php?keywords='+tags[i].word+'" style="color:#006ace; text-decoration:none; margin-right:5px;">' +tags[i].word + '[' + tags[i].count + ']<\/a>&nbsp;&nbsp; ';
+                      }
+                    }
+                    catch (e) {alert(e);}
+                  }
+                }
+                
+                //]]>
+                </script>
+              </form>
       </div>
-</form>
-<script type="Text/Javascript" language="JavaScript">
-<!--
-function selectPage(sel)
-{
-  sel.form.submit();
-}
-//-->
-</script>
-  </div>  
+     </div>
+    </div>
+    <div class="blank5"></div>     </blockquote>
+     
+     
+    
+          
+     
+     <blockquote>
+   
+     </blockquote>
+     
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+    <!--
+    reg("com");
+    //-->
+    </script>
+  <div class="blank"></div>
+  
+   
+<div id="ECS_COMMENT"> 554fcae493e564ee0dc75bdf2ebf94cacomments|a:3:{s:4:"name";s:8:"comments";s:4:"type";i:0;s:2:"id";i:11;}554fcae493e564ee0dc75bdf2ebf94ca</div>
+  </div>
   
 </div>
 <div id="footer" class="rs_footer">
@@ -612,4 +668,47 @@ $(function($) {
 	);
 });
 </script></body>
+<script type="text/javascript">
+var goods_id = 11;
+var goodsattr_style = 1;
+var gmt_end_time = 0;
+var day = "天";
+var hour = "小时";
+var minute = "分钟";
+var second = "秒";
+var end = "结束";
+var goodsId = 11;
+var now_time = 1400883531;
+onload = function(){
+  changePrice();
+  fixpng();
+  try {onload_leftTime();}
+  catch (e) {}
+}
+/**
+ * 点选可选属性或改变数量时修改商品价格的函数
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+</script>
 </html>
