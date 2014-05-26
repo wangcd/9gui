@@ -2,19 +2,6 @@
 $data = array (
   0 => 
   array (
-    'cat_id' => '3',
-    'cat_name' => '种类',
-    'measure_unit' => '',
-    'parent_id' => '0',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '7',
-    'goods_num' => '6',
-  ),
-  1 => 
-  array (
     'cat_id' => '33',
     'cat_name' => '其他',
     'measure_unit' => '',
@@ -26,7 +13,7 @@ $data = array (
     'has_children' => '2',
     'goods_num' => 0,
   ),
-  2 => 
+  1 => 
   array (
     'cat_id' => '1',
     'cat_name' => '国家',
@@ -39,7 +26,7 @@ $data = array (
     'has_children' => '9',
     'goods_num' => '7',
   ),
-  3 => 
+  2 => 
   array (
     'cat_id' => '5',
     'cat_name' => '酒具',
@@ -52,7 +39,7 @@ $data = array (
     'has_children' => '5',
     'goods_num' => '4',
   ),
-  4 => 
+  3 => 
   array (
     'cat_id' => '2',
     'cat_name' => '价格',
@@ -65,20 +52,20 @@ $data = array (
     'has_children' => '6',
     'goods_num' => '6',
   ),
-  5 => 
+  4 => 
   array (
-    'cat_id' => '20',
-    'cat_name' => '澳大利亚',
+    'cat_id' => '3',
+    'cat_name' => '种类',
     'measure_unit' => '',
-    'parent_id' => '1',
+    'parent_id' => '0',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
     'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
+    'has_children' => '7',
+    'goods_num' => '6',
   ),
-  6 => 
+  5 => 
   array (
     'cat_id' => '17',
     'cat_name' => '匈牙利',
@@ -91,7 +78,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  7 => 
+  6 => 
   array (
     'cat_id' => '14',
     'cat_name' => '意大利',
@@ -104,7 +91,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  8 => 
+  7 => 
   array (
     'cat_id' => '21',
     'cat_name' => '智利',
@@ -117,7 +104,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  9 => 
+  8 => 
   array (
     'cat_id' => '18',
     'cat_name' => '加拿大',
@@ -130,7 +117,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  10 => 
+  9 => 
   array (
     'cat_id' => '15',
     'cat_name' => '德国',
@@ -143,7 +130,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  11 => 
+  10 => 
   array (
     'cat_id' => '19',
     'cat_name' => '俄罗斯',
@@ -156,7 +143,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  12 => 
+  11 => 
   array (
     'cat_id' => '16',
     'cat_name' => '西班牙',
@@ -169,7 +156,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  13 => 
+  12 => 
   array (
     'cat_id' => '13',
     'cat_name' => '法国',
@@ -182,12 +169,12 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  14 => 
+  13 => 
   array (
-    'cat_id' => '23',
-    'cat_name' => '51-100元',
+    'cat_id' => '20',
+    'cat_name' => '澳大利亚',
     'measure_unit' => '',
-    'parent_id' => '2',
+    'parent_id' => '1',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
@@ -195,7 +182,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  15 => 
+  14 => 
   array (
     'cat_id' => '27',
     'cat_name' => '440元以上',
@@ -208,7 +195,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  16 => 
+  15 => 
   array (
     'cat_id' => '24',
     'cat_name' => '101-150元',
@@ -221,7 +208,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  17 => 
+  16 => 
   array (
     'cat_id' => '25',
     'cat_name' => '151-200元',
@@ -234,7 +221,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  18 => 
+  17 => 
   array (
     'cat_id' => '22',
     'cat_name' => '0-50元',
@@ -247,7 +234,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  19 => 
+  18 => 
   array (
     'cat_id' => '26',
     'cat_name' => '200-400元',
@@ -260,12 +247,12 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  20 => 
+  19 => 
   array (
-    'cat_id' => '7',
-    'cat_name' => '白葡萄酒',
+    'cat_id' => '23',
+    'cat_name' => '51-100元',
     'measure_unit' => '',
-    'parent_id' => '3',
+    'parent_id' => '2',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
@@ -273,7 +260,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  21 => 
+  20 => 
   array (
     'cat_id' => '11',
     'cat_name' => '啤酒',
@@ -286,7 +273,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  22 => 
+  21 => 
   array (
     'cat_id' => '8',
     'cat_name' => '香槟起泡酒',
@@ -299,7 +286,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  23 => 
+  22 => 
   array (
     'cat_id' => '6',
     'cat_name' => '红葡萄酒',
@@ -312,7 +299,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  24 => 
+  23 => 
   array (
     'cat_id' => '12',
     'cat_name' => '伏特加',
@@ -325,7 +312,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  25 => 
+  24 => 
   array (
     'cat_id' => '9',
     'cat_name' => '冰酒',
@@ -338,10 +325,23 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  26 => 
+  25 => 
   array (
     'cat_id' => '10',
     'cat_name' => '浆果酒',
+    'measure_unit' => '',
+    'parent_id' => '3',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+  ),
+  26 => 
+  array (
+    'cat_id' => '7',
+    'cat_name' => '白葡萄酒',
     'measure_unit' => '',
     'parent_id' => '3',
     'is_show' => '1',
