@@ -55,7 +55,7 @@ $data = array (
   4 => 
   array (
     'cat_id' => '4',
-    'cat_name' => '酒乐go资讯',
+    'cat_name' => '玖櫃资讯',
     'cat_type' => '1',
     'keywords' => '',
     'cat_desc' => '',
@@ -63,7 +63,7 @@ $data = array (
     'show_in_nav' => '0',
     'parent_id' => '0',
     'has_children' => '0',
-    'aricle_num' => '7',
+    'aricle_num' => '9',
   ),
   5 => 
   array (

@@ -78,7 +78,7 @@ $k = array (
 echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 ?></div>
 		
-		<div class="toptel fr">服务热线：<span class="toptelstyle">0379 - 6677 7766</span></div>
+		<div class="toptel fr">服务热线：<span class="toptelstyle">400-004-966</span></div>
 	</div>
 </div>
 <div class="wrap topmain_wrap">
