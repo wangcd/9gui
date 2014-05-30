@@ -2035,7 +2035,7 @@ form{
 	@-moz-document url-prefix(){.banner_wrap img {margin-top:-1px;}}
 
 .ban_wrap {height: 400px;}
-	.idxban-left {float: left; width: 208px; position:absolute; z-index:99; margin-top:-1px; display:none;}
+	.idxban-left {float: left; width: 208px; position:absolute; z-index:99; margin-top:-1px;}
 
 
 		.catetree-list li{width: 176px; height: 401px; background: #fff;font-family: Arial, Tahoma, Helvetica, sans-serif; padding-left:15px; padding-right:15px;}
