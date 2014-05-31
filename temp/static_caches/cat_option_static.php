@@ -272,22 +272,6 @@ $data = array (
     'id' => '2',
     'name' => '价格',
   ),
-  27 => 
-  array (
-    'cat_id' => '27',
-    'cat_name' => '440元以上',
-    'measure_unit' => '',
-    'parent_id' => '2',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 1,
-    'id' => '27',
-    'name' => '440元以上',
-  ),
   24 => 
   array (
     'cat_id' => '24',
@@ -368,6 +352,22 @@ $data = array (
     'id' => '23',
     'name' => '51-100元',
   ),
+  27 => 
+  array (
+    'cat_id' => '27',
+    'cat_name' => '440元以上',
+    'measure_unit' => '',
+    'parent_id' => '2',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 1,
+    'id' => '27',
+    'name' => '440元以上',
+  ),
   3 => 
   array (
     'cat_id' => '3',
@@ -383,22 +383,6 @@ $data = array (
     'level' => 0,
     'id' => '3',
     'name' => '种类',
-  ),
-  11 => 
-  array (
-    'cat_id' => '11',
-    'cat_name' => '啤酒',
-    'measure_unit' => '',
-    'parent_id' => '3',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 1,
-    'id' => '11',
-    'name' => '啤酒',
   ),
   8 => 
   array (
@@ -495,6 +479,22 @@ $data = array (
     'level' => 1,
     'id' => '7',
     'name' => '白葡萄酒',
+  ),
+  11 => 
+  array (
+    'cat_id' => '11',
+    'cat_name' => '啤酒',
+    'measure_unit' => '',
+    'parent_id' => '3',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 1,
+    'id' => '11',
+    'name' => '啤酒',
   ),
   33 => 
   array (

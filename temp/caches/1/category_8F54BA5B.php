@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401436595;s:8:"maketime";i:1401432995;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401509420;s:8:"maketime";i:1401505820;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
@@ -85,11 +85,13 @@ function checkSearchForm()
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
-		<div class="fl"><a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a></div>
+		<div class="fl">
+        	<a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a>
+        </div>
 		
          <div class="hd_head_searchss fl">
                 <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
-                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="" >
+                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value=""" >
                   
                   <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
                   </input>
@@ -429,7 +431,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
 																								<li>
 							<div class="gl-img">
 								<a href="goods-4.html">
-																		<b class="gl-water">6.2折</b>
+																		<b class="gl-water">2.7折</b>
 																		<img style="border:none;" src="images/201403/thumb_img/4_thumb_G_1395440303705.jpg" alt="法国拉菲庄园法莱利金冠2010干红礼盒 750ml">
 								</a>
 															</div>
@@ -437,7 +439,7 @@ document.getElementById('history_list').innerHTML = '您已清空最近浏览过
 								<div class="gl-name"><a href="goods-4.html" title="法国拉菲庄园法莱利金冠2010干红礼盒 750ml">法国拉菲庄园法莱利金冠2010干红礼盒 750ml</a></div>
 								<div class="gl-price">
 									<span class="gl-p-l"><b>
-																		¥433.00																		</b></span>
+																		¥188.00																		</b></span>
 									<span class="gl-p-r"><del>¥688.00</del></span>
 								</div>
 							</div>

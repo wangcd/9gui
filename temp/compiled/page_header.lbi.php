@@ -83,7 +83,15 @@ echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
-		<div class="fl"><a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a></div>
+		<div class="fl">
+        	<a href="index.php" class="fl"><img src="themes/red_two/images/logo1.jpg" height="70px;" />
+            </a>
+            <MARQUEE direction=up scrollAmount=1 class="marquee">
+            我们与国外酒庄直线对接<br/>
+            致力于恢复进口红酒在<br/>中国市场的理性价格<br/>
+            引导消费者对进口红酒的正确认知！<br/>
+            </MARQUEE>
+        </div>
 		
 
          <div class="hd_head_searchss fl">

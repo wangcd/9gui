@@ -2,6 +2,19 @@
 $data = array (
   0 => 
   array (
+    'cat_id' => '4',
+    'cat_name' => '玖櫃资讯',
+    'cat_type' => '1',
+    'keywords' => '',
+    'cat_desc' => '',
+    'sort_order' => '50',
+    'show_in_nav' => '0',
+    'parent_id' => '0',
+    'has_children' => '0',
+    'aricle_num' => '9',
+  ),
+  1 => 
+  array (
     'cat_id' => '11',
     'cat_name' => '品尚动态',
     'cat_type' => '1',
@@ -13,7 +26,7 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '7',
   ),
-  1 => 
+  2 => 
   array (
     'cat_id' => '12',
     'cat_name' => '红酒知识',
@@ -26,7 +39,7 @@ $data = array (
     'has_children' => '0',
     'aricle_num' => '7',
   ),
-  2 => 
+  3 => 
   array (
     'cat_id' => '1',
     'cat_name' => '系统分类',
@@ -39,7 +52,7 @@ $data = array (
     'has_children' => '2',
     'aricle_num' => '0',
   ),
-  3 => 
+  4 => 
   array (
     'cat_id' => '13',
     'cat_name' => '行业资讯',
@@ -51,19 +64,6 @@ $data = array (
     'parent_id' => '0',
     'has_children' => '0',
     'aricle_num' => '8',
-  ),
-  4 => 
-  array (
-    'cat_id' => '4',
-    'cat_name' => '玖櫃资讯',
-    'cat_type' => '1',
-    'keywords' => '',
-    'cat_desc' => '',
-    'sort_order' => '50',
-    'show_in_nav' => '0',
-    'parent_id' => '0',
-    'has_children' => '0',
-    'aricle_num' => '9',
   ),
   5 => 
   array (

@@ -83,12 +83,14 @@ echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
-		<div class="fl"><a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a></div>
+		<div class="fl">
+        	<a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a>
+        </div>
 		
 
          <div class="hd_head_searchss fl">
                 <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
-                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="<?php echo htmlspecialchars($this->_var['search_keywords']); ?>" >
+                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="<?php echo htmlspecialchars($this->_var['search_keywords']); ?>"" >
                   
                   <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
                   </input>

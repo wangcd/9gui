@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:43:"F:/wamp/www/9gui/themes/red_two/article.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:51:"F:/wamp/www/9gui/themes/red_two/library/ur_here.lbi";i:3;s:53:"F:/wamp/www/9gui/themes/red_two/library/left_help.lbi";i:4;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:5;s:52:"F:/wamp/www/9gui/themes/red_two/library/comments.lbi";i:6;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401436608;s:8:"maketime";i:1401433008;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:43:"F:/wamp/www/9gui/themes/red_two/article.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:51:"F:/wamp/www/9gui/themes/red_two/library/ur_here.lbi";i:3;s:53:"F:/wamp/www/9gui/themes/red_two/library/left_help.lbi";i:4;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:5;s:52:"F:/wamp/www/9gui/themes/red_two/library/comments.lbi";i:6;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401509423;s:8:"maketime";i:1401505823;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
@@ -85,11 +85,13 @@ function checkSearchForm()
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
-		<div class="fl"><a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a></div>
+		<div class="fl">
+        	<a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a>
+        </div>
 		
          <div class="hd_head_searchss fl">
                 <form name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
-                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value="" >
+                  <input type="text" maxlength="100" style="color:#333333;" name="keywords" id="keyword" class="hd_input_test"  value=""" >
                   
                   <input class="hd_search_btn" type="submit" style="width:98px" value="搜 索" >
                   </input>

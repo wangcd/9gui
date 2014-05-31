@@ -34,12 +34,12 @@ float: left;
     <div id="demo">
         <div id="indemo">
             <div id="demo1">
-<?php $_from = $this->_var['top_goods']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_20455500_1401370938');$this->_foreach['top_goods'] = array('total' => count($_from), 'iteration' => 0);
+<?php $_from = $this->_var['top_goods']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_46688900_1401505728');$this->_foreach['top_goods'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['top_goods']['total'] > 0):
-    foreach ($_from AS $this->_var['goods_0_20455500_1401370938']):
+    foreach ($_from AS $this->_var['goods_0_46688900_1401505728']):
         $this->_foreach['top_goods']['iteration']++;
 ?>
-            <a href="<?php echo $this->_var['goods_0_20455500_1401370938']['url']; ?>" title="<?php echo $this->_var['goods_0_20455500_1401370938']['short_name']; ?>"><img src="<?php echo $this->_var['goods_0_20455500_1401370938']['thumb']; ?>" width="150px" height="180px"/></a>
+            <a href="<?php echo $this->_var['goods_0_46688900_1401505728']['url']; ?>" title="<?php echo $this->_var['goods_0_46688900_1401505728']['short_name']; ?>"><img src="<?php echo $this->_var['goods_0_46688900_1401505728']['thumb']; ?>" width="150px" height="180px"/></a>
 <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>            
             </div>
             <div id="demo2"></div>

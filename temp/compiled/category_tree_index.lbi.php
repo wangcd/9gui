@@ -42,7 +42,7 @@ if ($this->_foreach['rs_childs']['total'] > 0):
 		);
 	});
 
-			$(function(){
+/*			$(function(){
 				$(".category_li,.idxban-left").hover(
 					function(){
 						$(".idxban-left").show();
@@ -51,5 +51,5 @@ if ($this->_foreach['rs_childs']['total'] > 0):
 						$(".idxban-left").hide();
 					}
 				);			
-			});	
+			});	*/
 </script>
