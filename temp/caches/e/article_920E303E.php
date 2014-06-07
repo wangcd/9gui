@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:43:"F:/wamp/www/9gui/themes/red_two/article.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:51:"F:/wamp/www/9gui/themes/red_two/library/ur_here.lbi";i:3;s:53:"F:/wamp/www/9gui/themes/red_two/library/left_help.lbi";i:4;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:5;s:52:"F:/wamp/www/9gui/themes/red_two/library/comments.lbi";i:6;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401509424;s:8:"maketime";i:1401505824;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:7:{i:0;s:43:"E:/wamp/www/jius/themes/red_two/article.dwt";i:1;s:56:"E:/wamp/www/jius/themes/red_two/library/page_header1.lbi";i:2;s:51:"E:/wamp/www/jius/themes/red_two/library/ur_here.lbi";i:3;s:53:"E:/wamp/www/jius/themes/red_two/library/left_help.lbi";i:4;s:51:"E:/wamp/www/jius/themes/red_two/library/history.lbi";i:5;s:52:"E:/wamp/www/jius/themes/red_two/library/comments.lbi";i:6;s:55:"E:/wamp/www/jius/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401942659;s:8:"maketime";i:1401939059;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
@@ -85,8 +85,14 @@ function checkSearchForm()
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
+    
 		<div class="fl">
-        	<a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a>
+        	<a href="index.php" class="fl"><img src="themes/red_two/images/logo.gif" height="80px;" />
+            </a>
+            <div style="width:250px; float:left">
+            <p class="logo_right" style="color:#1e0600">洛阳市区免费配送 假一赔十</p>
+            <p class="logo_right" style="color: #cc0000;">原瓶进口 400 004 966</p>
+            </div>
         </div>
 		
          <div class="hd_head_searchss fl">

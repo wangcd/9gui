@@ -83,8 +83,15 @@ echo $this->_echash . $k['name'] . '|' . serialize($k) . $this->_echash;
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
+    
 		<div class="fl">
-        	<a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a>
+        	<a href="index.php" class="fl"><img src="themes/red_two/images/logo.gif" height="80px;" />
+            </a>
+            <div style="width:230px; float:left">
+            <p class="logo_right" style="color:#1e0600">洛阳市区免费配送</p>
+
+            <p class="logo_right" style="color: #cc0000;">原瓶进口假一赔十</p>
+            </div>
         </div>
 		
 

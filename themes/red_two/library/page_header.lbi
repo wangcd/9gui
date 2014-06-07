@@ -80,13 +80,13 @@ function checkSearchForm()
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
 		<div class="fl">
-        	<a href="index.php" class="fl"><img src="images/logo1.jpg" height="70px;" />
+        	<a href="index.php" class="fl"><img src="images/logo.gif" height="80px;" />
             </a>
-            <MARQUEE direction=up scrollAmount=1 class="marquee">
-            我们与国外酒庄直线对接<br/>
-            致力于恢复进口红酒在<br/>中国市场的理性价格<br/>
-            引导消费者对进口红酒的正确认知！<br/>
-            </MARQUEE>
+            <div style="width:230px; float:left">
+            <p class="logo_right" style="color:#1e0600; font-style:oblique">洛阳市区免费配送</p>
+
+            <p class="logo_right" style="color: #cc0000; font-style:oblique">原瓶进口假一赔十</p>
+            </div>
         </div>
 		
 

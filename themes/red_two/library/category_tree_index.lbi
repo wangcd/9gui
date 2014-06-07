@@ -18,8 +18,8 @@
 			<!-- 竖导航end -->
 <script type="text/javascript">
 	$(function($) {
-		$(".catetree-list li:odd").css({background:"#ededed",color:"#888"});
-		$(".catetree-list li:even").css({background:"#fff",color:"#888"});
+		$(".catetree-list li:odd").css({background:"#b4b8be",color:"#888"});
+		$(".catetree-list li:even").css({background:"#ededed",color:"#888"});
 		$(".catetree-list li:eq(0)").css("border-left","4px #f06680 solid");
 		$(".catetree-list li:eq(1)").css("border-left","4px #db9b3f solid");
 		$(".catetree-list li:eq(2)").css("border-left","4px #6aa515 solid");

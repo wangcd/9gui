@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1401509420;s:8:"maketime";i:1401505820;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php exit;?>a:3:{s:8:"template";a:9:{i:0;s:44:"F:/wamp/www/9gui/themes/red_two/category.dwt";i:1;s:56:"F:/wamp/www/9gui/themes/red_two/library/page_header1.lbi";i:2;s:57:"F:/wamp/www/9gui/themes/red_two/library/category_tree.lbi";i:3;s:51:"F:/wamp/www/9gui/themes/red_two/library/history.lbi";i:4;s:54:"F:/wamp/www/9gui/themes/red_two/library/ur_here_rs.lbi";i:5;s:50:"F:/wamp/www/9gui/themes/red_two/library/search.lbi";i:6;s:54:"F:/wamp/www/9gui/themes/red_two/library/goods_list.lbi";i:7;s:49:"F:/wamp/www/9gui/themes/red_two/library/pages.lbi";i:8;s:55:"F:/wamp/www/9gui/themes/red_two/library/page_footer.lbi";}s:7:"expires";i:1402106037;s:8:"maketime";i:1402102437;}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="Generator" content="101BL v2.0" />
@@ -85,8 +85,14 @@ function checkSearchForm()
 </div>
 <div class="wrap topmain_wrap">
 	<div class="sitewith">
+    
 		<div class="fl">
-        	<a href="index.php"><img src="themes/red_two/images/logo1.jpg" height="70px;" /></a>
+        	<a href="index.php" class="fl"><img src="themes/red_two/images/logo.gif" height="80px;" />
+            </a>
+            <div style="width:230px; float:left">
+            <p class="logo_right" style="color:#1e0600">洛阳市区免费配送</p>
+            <p class="logo_right" style="color: #cc0000;">原瓶进口假一赔十</p>
+            </div>
         </div>
 		
          <div class="hd_head_searchss fl">

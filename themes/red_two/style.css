@@ -146,7 +146,14 @@ color: #812A5B; font-weight:bold }
 	width:320px; height:60px; line-height:60px; float:left;font-size: 28px;font-weight: bolder;	font-family: 'Courier New', Courier, monospace;
 	color:#812a5b;
 }
-
+.logo_right{
+	width:230px;
+	height:30px;
+	line-height:50px;
+	float:left;
+	font-size:18px;
+	font-weight:800;
+}
 
  
 /* ====================
@@ -1974,7 +1981,7 @@ form{
     z-index: 1;
     background: url('images/indexhead_sprite.png') no-repeat scroll -279px -20px transparent;
     height: 32px;
-    width: 248px;
+    width: 255px;
     border: 0px none;
     color: #333;
     vertical-align: middle;
